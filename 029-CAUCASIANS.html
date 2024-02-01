@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Flag Co.</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        font-family: Arial,Helvetica,sans-serif;
+        margin: auto;
+        align-items: center;
+      }
+        .header {
+          width: 100%;
+          height:120px;
+          top: 0;
+          background-color: #ffffff;
+          border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
+          box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
+          padding-top: 0rem;
+        }
+        .header-text-container{
+          display: flex;
+          height: 120px;
+          max-width: 1200px;
+          align-items: center;
+          justify-content: space-between;
+          color: #000000;
+          margin: 0 auto; /* Center the container within the page */
+        }
+        .left-text{
+          display:flex;
+          color: inherit;
+          text-decoration: none;
+          align-items: center;
+          justify-content: left;
+          font-size: 28px;
+        }
+        .left-text h2:hover {
+          color: #FFCC00; /* Change the color to your desired hover color */
+          cursor: pointer; /* Change the cursor to pointer on hover */
+        }
+        .left-text img{
+          height: 100px; 
+          padding-right: 1rem;
+          object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
+          justify-content: center;
+        }      
+        .right-text{
+          display:flex;
+          color: inherit;
+          text-decoration: none;
+          text-align: right;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+        }
+        .right-text p {
+          padding-left: 1rem;
+          text-align: right;
+          font-size: 20px;
+          color: #000000;
+        }
+        .right-text p:hover {
+            color: #FFCC00; /* Change the color to your desired hover color */
+            cursor: pointer; /* Change the cursor to pointer on hover */
+        }
+  
+  
+  
+        .container {
+          display: flex;
+          flex: 1;
+          flex-direction:row;
+          border: #ffffff;
+          justify-content: center;
+          align-items: center;
+          padding-top: 0rem;
+          padding-bottom: 1rem;
+          margin-top: auto; /* This is crucial for a sticky footer */
+          width: 1200px;
+  
+        }
+        .left-column {
+          flex: 1;
+          padding: 0rem;
+          background-color: #ffffff;
+          width: 700px;
+        }
+        .left-column p {
+          margin: 0rem 0;
+          text-align: center;
+          padding: 0.25rem;
+          margin-top: 0.5rem;
+        }
+        .large-image-container {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-style: normal;
+          height: 400px;
+          padding-left: 5rem;
+          padding-right: 5rem;
+          padding-bottom: 0rem;
+        }
+        .large-image-container img {
+          max-width: 100%;
+          max-height: 100%;
+          height: auto;
+          margin-top: 2rem;
+          margin-bottom: 0rem;
+          padding-bottom: 0rem;
+          transition: transform 0.3s ease-in-out;
+          cursor: pointer;
+          overflow: auto;
+        }
+        .small-images-container {
+          display: flex;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+          justify-content: center; /* Center the images horizontally */
+          align-items: center; /* Center the images vertically */
+        }
+        .small-images-container img {
+          width: 65px;
+          margin: 0rem;
+          padding: 0.5rem;
+          border: 0.1rem solid transparent; /* Add a transparent border to all images */
+          cursor: pointer;
+        }
+        .small-images-container img.selected {
+          border-color: grey; /* Change the border color for the selected image */
+        }
+        .right-column {
+          background-color: #ffffff;
+          margin-right: 6rem;;
+          margin-left: 1rem;
+          width: 500px;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 1rem;
+          margin-bottom: 1rem; /* Adjust the margin as needed to increase the gap */
+        }
+        table, th, td {
+          padding: 0.25rem; /* Adjust the padding as needed */
+          text-align: left;        
+        }
+        .table-container{
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          margin: 1rem;
+          font-style: normal;
+          border-top: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
+          border-bottom: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
+        }
+        .table-container h1 {
+          text-align: center;
+        }
+        .table-container h2, h3, p {
+          text-align: start;
+        }
+  
+        .about-section ul {
+          padding-top: 0px;;
+          padding-left: 10px;
+        }
+        .about-section li {
+          margin-bottom: 10px; /* Adjust the value as needed for the desired spacing */
+        }
+  
+        .buy-now {
+          margin-top: 1rem;
+          padding-bottom: 1rem;
+          text-align: center;
+          width: 100%;
+        }
+        button {
+          padding: 0.75rem;
+          background-color: #484cc2;
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+        .available_at_amazon_logo {
+          text-align: center;
+        }
+        .available_at_amazon_logo img{
+          margin-top: 1rem;
+          width: 120PX;
+          justify-content: center;
+          margin-bottom: 200px;
+        }
+  
+  
+        .footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #ffffff;
+          border-top: 0.1rem solid gray;
+          box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
+          color: #000000;
+          padding-top: 0rem;
+          padding-bottom: 0rem;
+          position: relative;
+          bottom: 0;
+          margin-bottom: 0;
+          width: 100%;
+        }
+        .footer-container {
+          width: 1200px;  
+          display: flex;
+          align-items: center;
+        }
+        .footer-column-left {
+          width: 400px;
+          padding: 0rem;
+          text-align: left;
+        }
+        .footer-column-center {
+          width: 400px;
+          padding: 0rem;
+          align-items:center;
+          justify-content: left;
+        }
+        .footer-column-center-text-container {
+          text-align: center;
+        }
+        .footer-column-right{
+          width: 400px;
+        }
+        .footer p {
+          margin: 0.25rem 0;
+          text-align: center;
+          font-size: 12px;
+        }
+        .footer a {
+          color: inherit;
+        }
+        .footer img {
+          max-height: 150px;
+        }
+        #overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 2;
+          display: none;
+        }
+        #overlay.active {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #overlay img {
+          max-width: 80%;
+          max-height: 80%;
+          justify-content: center;
+          align-items: center;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="header-text-container">
+        <div class="left-text">
+          <img src="assets/LeeFlagCo_logo_whiteout.png" alt="Lee Flag Co" onclick="window.location.href='home.html';"> 
+          <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
+        </div>
+        <div class="right-text">
+          <p onclick="window.location.href='shop.html';">Shop</p>
+          <p onclick="window.location.href='about.html';">About</p>
+          <p onclick="window.location.href='contact.html';">Contact</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="left-column">
+
+        <div class="large-image-container">
+          <img id="largeImage" src="assets/B0CT47JJ86.MAIN.jpg" alt="Csucasians Flag" onclick="toggleOverlay()">
+        </div>
+        <div id="overlay" onclick="toggleOverlay()">
+          <img id="overlayImage" src="" alt="Overlay Image">
+        </div>
+
+        <p>Click image to open expanded view</p>
+        
+        <!-- Small icons for image switching -->
+        <div class="small-images-container">
+          <img src="assets/B0CT47JJ86.MAIN.jpg" alt="Csucasians Flag" onclick="switchImage('assets/B0CT47JJ86.MAIN.jpg')"  class="selected">
+          <img src="assets/B0CT47JJ86.FRNT.jpg" alt="Csucasians Flag" onclick="switchImage('assets/B0CT47JJ86.FRNT.jpg')">
+          <img src="assets/B0CT47JJ86.SIDE.jpg" alt="Csucasians Flag" onclick="switchImage('assets/B0CT47JJ86.SIDE.jpg')">
+          <img src="assets/B0CT47JJ86.BACK.jpg" alt="Csucasians Flag" onclick="switchImage('assets/B0CT47JJ86.BACK.jpg')">
+          <img src="assets/B0CT47JJ86.PT01.jpg" alt="Csucasians Flag" onclick="switchImage('assets/B0CT47JJ86.PT01.jpg')">
+          <img src="assets/whychoose.jpg" alt="Why Choose Lee Flag Co" onclick="switchImage('assets/whychoose.jpg')">
+          <img src="assets/ownedoperated.jpg" alt="Lee Flag Co Is Owned and Operated in the USA" onclick="switchImage('assets/ownedoperated.jpg')">
+        </div>
+        
+        <div id="overlay" onclick="hideOverlay()"></div>
+
+        <section class="buy-now">
+          <a href="https://a.co/d/cb7ljDZ">
+            <button>SHOP NOW</button>
+          </a>
+        </section>
+
+        <div class="available_at_amazon_logo">
+          <a href="https://a.co/d/cb7ljDZ">
+            <img src="assets/available_at_amazon_logo.png" alt="Available at Amazon" >
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="right-column">
+
+          <h2>Caucasians Flag 3' x 5' For Garage, Shop, Man Cave, Dorm, Home Office, or Bar by Lee Flag Co.</h2>
+
+        <div class="table-container">
+          <!-- Table -->
+          <table>
+            <tr>
+              <td><strong>Size</strong></td>
+              <td>3' x 5'</td>
+            </tr>
+            <tr>
+              <td><strong>Fabric Type</strong></td>
+              <td>100% 100D Polyester</td>
+            </tr>
+            <tr>
+              <td><strong>Hanging Style</strong></td>
+              <td>Wall - 4 Grommets</td>
+            </tr>
+          </table>
+        </div>
+        <div class="about-section">
+          <h3>About this item</h3>
+          <ul>
+            <li><span style="font-weight: bold;">Size:</span> 3' x 5'. This is a large, full-sixed flag meant to be hung on a wall. Image is only printed on one side of the flag. Comes with 4 grommets for easy hanging.</li>
+            <li><span style="font-weight: bold;">Material:</span> All Lee Flag Co. flags are made from 100D polyester. 100D refers to the grade of the fabric. The higher the number, the better. The majority of flags sold online today are only 68D or 75D to save cost on material and shipping, but Lee Flag Co. uses 100D in all our flags.</li>
+            <li><span style="font-weight: bold;">Durable:</span> All our flags are double stitched along the edges to make the flag more durable and prevent tearing or ripping.</li>
+            <li><span style="font-weight: bold;">Care Instructions:</span> If the flag requires a thorough cleaning, hand wash in cold water using a mild detergent. Do not use bleach or harsh chemicals. Allow the flag to air-dry.</li>
+          </ul>
+        </div>               
+        
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-column-left">
+          <img id="largeImage" src="assets/LeeProductsLtd_logo.jpg" alt="Lee Products Ltd">
+        </div>
+        <div class="footer-column-center">
+          <div class="footer-column-center-text-container ">
+            <p>&copy; 2024 Lee Products Ltd. All rights reserved.</p>
+            <p>Performance & Security by <a href="https://cloudflare.com" target="_blank">Cloudflare</a></p>
+            <p>
+              <a href="conditions_of_use.html" target="_blank">Conditions of Use</a>
+              <span style="margin-right: 10px;"></span> <!-- Adjust the margin as needed -->
+              <a href="privacy_notice.html" target="_blank">Privacy Notice</a>
+            </p>          
+          </div>
+        </div>
+        <div class="footer-column-right">
+        </div>
+      </div>
+    </div>
+  
+  <!-- JavaScript function for image switching -->
+  <script>
+
+    function switchImage(newImagePath) {
+      // Set the source of the large image to the clicked small image
+      document.getElementById('largeImage').src = newImagePath;
+
+      // Remove the 'selected' class from all small images
+      var smallImages = document.querySelectorAll('.small-images-container img');
+      smallImages.forEach(function (img) {
+        img.classList.remove('selected');
+      });
+
+      // Add the 'selected' class to the clicked small image
+      var selectedImage = document.querySelector('.small-images-container img[src="' + newImagePath + '"]');
+      if (selectedImage) {
+        selectedImage.classList.add('selected');
+      }
+    }
+    
+    function toggleOverlay() {
+      var overlay = document.getElementById('overlay');
+      var overlayImage = document.getElementById('overlayImage');
+      var largeImageSrc = document.getElementById('largeImage').src;
+
+      if (overlay.classList.contains('active')) {
+        // Hide overlay
+        overlay.classList.remove('active');
+      } else {
+        // Show overlay and set its image source
+        overlay.classList.add('active');
+        overlayImage.src = largeImageSrc;
+      }
+    }
+
+  </script>
+  </body>
+</html>
