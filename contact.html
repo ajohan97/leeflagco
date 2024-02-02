@@ -14,6 +14,9 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="search.js"></script>
+
   <title>LeeFlagCo</title>
   <style>
     body {
@@ -172,6 +175,34 @@
           <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
         </div>
         <div class="right-text">
+          <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar" onkeypress="handleKeyPress(event)">
+            <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon" onclick="searchFunction()">
+          </div>
+
+          <style>
+                .search-container {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  margin-right: 50px;
+                }
+                .square-search-bar {
+                  position: relative;
+                  padding: 10px; /* Adjust padding for height */
+                  width: 300px; /* Adjust width as needed */
+                  border-radius: 0px; /* Add border-radius for a square appearance */
+                  border: 1px solid #ccc; /* Add border for better visibility */
+                }
+                .search-icon {
+                  cursor: pointer;
+                  position: absolute;
+                  right: 8px; /* Adjust the right position as needed */
+                  height: 20px; /* Adjust height of the magnifying glass icon */
+                  width: 20px; /* Adjust width of the magnifying glass icon */
+                }
+          </style>
+
           <p onclick="window.location.href='shop.html';">Shop</p>
           <p onclick="window.location.href='about.html';">About</p>
           <p onclick="window.location.href='contact.html';"><span style="color: #FFCC00;">Contact</span></p>
