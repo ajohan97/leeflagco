@@ -1,85 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-  
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="search.js"></script>
-
-    <title>Lee Flag Co.</title>
+    <title>We Want Beer Flag</title>
     <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      font-family: Arial,Helvetica,sans-serif;
-      margin: auto;
-      align-items: center;
-    }
-      .header {
-        width: 100%;
-        height:120px;
-        top: 0;
-        background-color: #ffffff;
-        border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
-        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
-        padding-top: 0rem;
-      }
-      .header-text-container{
+      body {
         display: flex;
-        height: 120px;
-        max-width: 1200px;
-        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        font-family: Arial,Helvetica,sans-serif;
+        margin: auto;
+      }
+      .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height:75px;
+        background-color: #000000;
+        color: #fff;
+        padding: 0.15rem; /* Adjust padding as needed */
+        display: flex;
         justify-content: space-between;
-        color: #000000;
-        margin: 0 auto; /* Center the container within the page */
+        align-items: center;
+        border-bottom: 0.1rem solid gray; /* Adjust the border thickness */
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
+        padding-top: 0.15rem;
+        /*padding-bottom: 0.15rem;  */   
+        z-index: 1000; /* Set a higher z-index to ensure the header appears above other elements */
       }
       .left-text{
+        /*background-color: #e28686;*/
         display:flex;
+        flex: content;
         color: inherit;
         text-decoration: none;
-        align-items: center;
-        justify-content: left;
-        font-size: 28px;
+        margin-left: 10rem;
+        width: 50%;
       }
-      .left-text h2:hover {
-        color: #FFCC00; /* Change the color to your desired hover color */
-        cursor: pointer; /* Change the cursor to pointer on hover */
+      .left-text h1:hover {
+          color: #ffcc00; /* Change the color to your desired hover color */
+          cursor: pointer; /* Change the cursor to pointer on hover */
       }
       .left-text img{
-        height: 100px; 
+        max-width: 4%; 
+        max-height: auto; 
         padding-right: 1rem;
         object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
-        justify-content: center;
       }      
       .right-text{
         display:flex;
+        /*flex: content;*/
         color: inherit;
         text-decoration: none;
+        margin-right: 10rem;
         text-align: right;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
       }
-      .right-text p {
+      .right-text h3 {
         padding-left: 1rem;
         text-align: right;
-        font-size: 20px;
-        color: #000000;
       }
-      .right-text p:hover {
-          color: #FFCC00; /* Change the color to your desired hover color */
+      .right-text h3:hover {
+          color: #ffcc00; /* Change the color to your desired hover color */
           cursor: pointer; /* Change the cursor to pointer on hover */
+      }
+      .sub_header {
+        margin-top: 75px; /* Adjust this value to leave space for the fixed header */
       }
 
 
@@ -88,20 +78,19 @@
         display: flex;
         flex: 1;
         flex-direction:row;
+        align-items: stretch; /* Set the height of the container to 100% */
         border: #ffffff;
         justify-content: center;
-        align-items: center;
-        padding-top: 0rem;
+        padding-top: 1rem;
         padding-bottom: 1rem;
         margin-top: auto; /* This is crucial for a sticky footer */
-        width: 1200px;
-
+        width: 100%;
+        height: 100vh;
       }
       .left-column {
         flex: 1;
-        padding: 0rem;
+        padding: 0.5rem;
         background-color: #ffffff;
-        width: 700px;
       }
       .left-column p {
         margin: 0rem 0;
@@ -140,19 +129,18 @@
         align-items: center; /* Center the images vertically */
       }
       .small-images-container img {
-        width: 65px;
+        max-width: 13%;
         margin: 0rem;
         padding: 0.5rem;
         border: 0.1rem solid transparent; /* Add a transparent border to all images */
-        cursor: pointer;
       }
       .small-images-container img.selected {
         border-color: grey; /* Change the border color for the selected image */
       }
       .right-column {
+        flex: 1.33;
         background-color: #ffffff;
         margin-right: 6rem;;
-        width: 500px;
       }
       table {
         border-collapse: collapse;
@@ -181,21 +169,23 @@
       .table-container h2, h3, p {
         text-align: start;
       }
-
-      .about-section ul {
-        padding-top: 0px;;
-        padding-left: 10px;
-      }
-      .about-section li {
-        margin-bottom: 10px; /* Adjust the value as needed for the desired spacing */
-      }
-
       .buy-now {
         margin-top: 1rem;
         padding-bottom: 1rem;
         text-align: center;
         width: 100%;
       }
+      
+      .available_at_amazon_logo {
+        text-align: center;
+      }
+
+      .available_at_amazon_logo img{
+        margin-top: 1rem;
+        width: 120PX;
+        justify-content: center;
+      }
+
       button {
         padding: 0.75rem;
         background-color: #484cc2;
@@ -204,65 +194,39 @@
         border-radius: 0.5rem;
         cursor: pointer;
       }
-      .available_at_amazon_logo {
-        text-align: center;
-      }
-      .available_at_amazon_logo img{
-        margin-top: 1rem;
-        width: 120PX;
-        justify-content: center;
-        margin-bottom: 200px;
-      }
-
-
       .footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      border-top: 0.1rem solid gray;
-      box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
-      color: #000000;
-      padding-top: 0rem;
-      padding-bottom: 0rem;
-      position: relative;
-      bottom: 0;
-      margin-bottom: 0;
-      width: 100%;
-    }
-    .footer-container {
-      width: 1200px;  
-      display: flex;
-      align-items: center;
-    }
-    .footer-column-left {
-      width: 400px;
-      padding: 0rem;
-      text-align: left;
-    }
-    .footer-column-center {
-      width: 400px;
-      padding: 0rem;
-      align-items:center;
-      justify-content: left;
-    }
-    .footer-column-center-text-container {
-      text-align: center;
-    }
-    .footer-column-right{
-      width: 400px;
-    }
-    .footer p {
-      margin: 0.25rem 0;
-      text-align: center;
-      font-size: 12px;
-    }
-    .footer a {
-      color: inherit;
-    }
-    .footer img {
-      max-height: 150px;
-    }
+        display: flex;
+        align-items: center; /* Add this line to vertically center the content */
+        background-color: #ffffff;
+        border-top: 0.1rem solid gray;
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect to the border*/
+        color: #000000;
+        flex-shrink: 0;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        position: relative;
+        bottom: 0;
+        margin-top: 4rem;
+        margin-bottom: 0;
+      }
+
+      .footer-column {
+        flex: 1;
+        padding: 0rem; /* Adjust the padding as needed */
+        text-align: center; 
+      }
+
+      .footer p {
+        margin: 0.25rem 0;
+        text-align: center; 
+      }
+      .footer a {
+        color: inherit;
+      }
+      .footer img {
+        max-width: 20%; /* Set maximum width to 100% of the container */
+        max-height: auto; /* Maintain aspect ratio */
+      }
       #overlay {
         position: fixed;
         top: 0;
@@ -289,47 +253,19 @@
   <body>
 
     <div class="header">
-      <div class="header-text-container">
-        <div class="left-text">
+      <div class="left-text">
           <img src="assets/LeeFlagCo_logo_whiteout.png" alt="Lee Flag Co" onclick="window.location.href='home.html';"> 
-          <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
-        </div>
-        <div class="right-text">
-          
-          <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar" onkeypress="handleKeyPress(event)">
-            <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon" onclick="searchFunction()">
-          </div>
+          <h1 onclick="window.location.href='home.html';">LeeFlagCo.com</h1>
+        </a>
+      </div>
+      <div class="right-text">
 
-          <style>
-                .search-container {
-                  display: flex;
-                  align-items: center;
-                  position: relative;
-                  margin-right: 50px;
-                }
-                .square-search-bar {
-                  position: relative;
-                  padding: 10px; /* Adjust padding for height */
-                  width: 300px; /* Adjust width as needed */
-                  border-radius: 0px; /* Add border-radius for a square appearance */
-                  border: 1px solid #ccc; /* Add border for better visibility */
-                }
-                .search-icon {
-                  cursor: pointer;
-                  position: absolute;
-                  right: 8px; /* Adjust the right position as needed */
-                  height: 20px; /* Adjust height of the magnifying glass icon */
-                  width: 20px; /* Adjust width of the magnifying glass icon */
-                }
-          </style>
-
-          <p onclick="window.location.href='shop.html';">Shop</p>
-          <p onclick="window.location.href='about.html';">About</p>
-          <p onclick="window.location.href='contact.html';">Contact</p>
-        </div>
+        <h3 onclick="window.location.href='shop.html';">Shop</h3>
+        <h3 onclick="window.location.href='about.html';">About</h3>
+        <h3 onclick="window.location.href='contact.html';">Contact</h3>
       </div>
     </div>
+    <div class="sub_header"></div>
 
 
     <div class="container">
@@ -346,7 +282,7 @@
         
         <!-- Small icons for image switching -->
         <div class="small-images-container">
-          <img src="assets/wewantbeer.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer.jpg')" class="selected">
+          <img src="assets/wewantbeer.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer.jpg')">
           <img src="assets/wewantbeer2.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer2.jpg')">
           <img src="assets/wewantbeer3.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer3.jpg')">
           <img src="assets/whychoose.jpg" alt="We Want Beer" onclick="switchImage('assets/whychoose.jpg')">
@@ -395,19 +331,16 @@
             </tr>
           </table>
         </div>
-
-        <div class="about-section">
-          <h3>About this item</h3>
-          <ul>
-            <li><span style="font-weight: bold;">Size:</span> This full-sized flag measures 3' x 5' for a noticeable presence on any wall. The flag also includes 4 grommets for easy hanging, making it a convenient way to display your flag in any room.</li>
-            <li><span style="font-weight: bold;">Durable Construction:</span> The flag is made of high-quality polyester material and is designed to be durable. It is fade-resistant and will not tear easily.</li>
-            <li><span style="font-weight: bold;">Perfect for Parties:</span> Perfect for parties and other social gatherings. It is a fun and unique way to show your support for the We Want Beer protest and to promote a good time with friends. This flag is sure to be a hit at any party or event.</li>
-            <li><span style="font-weight: bold;">Unique Design:</span> Features a unique design that is sure to catch the attention of anyone who sees it and to make a statement. The flag is sure to be a conversation starter and will be a great addition to any room.</li>
-            <li><span style="font-weight: bold;">Great Gift:</span> Perfect gift for any college student or beer lover. It is a fun and unique way to show your support for abolishing the 18th amendment and to promote a good time with friends. This flag will be a treasured possession for years to come.</li>
-          </ul>
-        </div>
-        
-        
+          <div class="about-section">
+            <h3>About this item</h3>
+            <ul>
+              <li>Size: This full-sized flag measures 3' x 5' for a noticeable presence on any wall. The flag also includes 4 grommets for easy hanging, making it a convenient way to display your flag in any room.</li>
+              <li>Durable Construction: The flag is made of high-quality polyester material and is designed to be durable. It is fade-resistant and will not tear easily.</li>
+              <li>Perfect for Parties: Perfect for parties and other social gatherings. It is a fun and unique way to show your support for the We Want Beer protest and to promote a good time with friends. The flag is sure to be a hit at any party or event.</li>
+              <li>Unique Design: Features a unique design that is sure to catch the attention of anyone who sees it and to make a statement. The flag is sure to be a conversation starter and will be a great addition to any room.</li>
+              <li>Perfect Gift: Perfect gift for any college student or beer lover. It is a fun and unique way to show your support for abolishing the 18th amendment and to promote a good time with friends. The flag is sure to be a hit and will be a treasured possession for years to come.</li>
+            </ul>
+          </div>
       </div>
     </div>
     <div class="footer">

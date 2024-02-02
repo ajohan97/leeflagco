@@ -13,6 +13,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="search.js"></script>
+
     <title>LeeFlagCo</title>
     <style>
     body {
@@ -79,7 +82,28 @@
           color: #FFCC00; /* Change the color to your desired hover color */
           cursor: pointer; /* Change the cursor to pointer on hover */
       }
-      
+
+      .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 50px;
+      }
+      .square-search-bar {
+        position: relative;
+        padding: 10px; /* Adjust padding for height */
+        width: 300px; /* Adjust width as needed */
+        border-radius: 0px; /* Add border-radius for a square appearance */
+        border: 1px solid #ccc; /* Add border for better visibility */
+      }
+      .search-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 8px; /* Adjust the right position as needed */
+        height: 20px; /* Adjust height of the magnifying glass icon */
+        width: 20px; /* Adjust width of the magnifying glass icon */
+      }
+
       .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -169,7 +193,13 @@
           <img src="assets/LeeFlagCo_logo_whiteout.png" alt="Lee Flag Co" onclick="window.location.href='home.html';"> 
           <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
         </div>
-        <div class="right-text">
+        <div class="right-text">  
+
+          <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar" onkeypress="handleKeyPress(event)">
+            <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon" onclick="searchFunction()">
+          </div>
+
           <p onclick="window.location.href='shop.html';"><span style="color: #FFCC00;">Shop</span></p>
           <p onclick="window.location.href='about.html';">About</p>
           <p onclick="window.location.href='contact.html';">Contact</p>
@@ -306,7 +336,50 @@
 
     
   <script>
+    // Function to get the value of a query parameter from the URL
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
 
+    // Read the search term from the URL
+    const searchTermFromUrl = getQueryParam('search');
+
+    // If the search term is present, perform the search using searchTermFromUrl
+    if (searchTermFromUrl) {
+      document.getElementById('search-bar').value = searchTermFromUrl;
+      performSearch(searchTermFromUrl);
+    }
+
+    // Function to perform the search and filter items
+    function performSearch(searchTerm) {
+      const gridItems = document.querySelectorAll('.grid-item');
+
+      // Loop through each grid item and check if it contains the search term
+      gridItems.forEach(function(item) {
+        const title = item.querySelector('p').innerText.toLowerCase();
+
+        // If the title contains the search term, show the item, otherwise hide it
+        if (title.includes(searchTerm.toLowerCase())) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Function to handle Enter key press
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        searchFunction();
+      }
+    }
+
+    // Function to perform the search when clicking the magnifying glass
+    function searchFunction() {
+      const searchTerm = document.getElementById('search-bar').value;
+      performSearch(searchTerm);
+    }
   </script>
 
   </body>
