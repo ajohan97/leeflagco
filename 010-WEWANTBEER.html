@@ -331,6 +331,22 @@
       </div>
     </div>
 
+  <style>
+    .nav-bar {
+      display: flex;
+      width: 1200px;
+      padding: 5px;
+    }
+  </style>
+    <div class="nav-bar">
+      <div style="display: flex; align-items: center; justify-content: flex-start;">
+        <p onclick="window.location.href='home.html';" style="text-decoration: underline;">Home</p>
+        <span style="margin: 0 0.5rem;">/</span>
+        <p onclick="window.location.href='shop.html';" style="text-decoration: underline;">Shop</p>
+        <span style="margin: 0 0.5rem;">/</span>
+        <p style="text-decoration: underline;">We Want Beer Flag</p>
+      </div>
+    </div>
 
     <div class="container">
       <div class="left-column">
@@ -346,11 +362,13 @@
         
         <!-- Small icons for image switching -->
         <div class="small-images-container">
-          <img src="assets/wewantbeer.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer.jpg')" class="selected">
-          <img src="assets/wewantbeer2.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer2.jpg')">
-          <img src="assets/wewantbeer3.jpg" alt="We Want Beer" onclick="switchImage('assets/wewantbeer3.jpg')">
-          <img src="assets/whychoose.jpg" alt="We Want Beer" onclick="switchImage('assets/whychoose.jpg')">
-          <img src="assets/ownedoperated.jpg" alt="We Want Beer" onclick="switchImage('assets/ownedoperated.jpg')">
+          <img src="assets/B0CP8N31HK.MAIN.jpg" onclick="switchImage('assets/B0CP8N31HK.MAIN.jpg')" class="selected">
+          <img src="assets/B0CP8N31HK.FRNT.jpg" onclick="switchImage('assets/B0CP8N31HK.FRNT.jpg')">
+          <img src="assets/B0CP8N31HK.SIDE.jpg" onclick="switchImage('assets/B0CP8N31HK.SIDE.jpg')">
+          <img src="assets/B0CP8N31HK.BACK.jpg" onclick="switchImage('assets/B0CP8N31HK.BACK.jpg')">
+          <img src="assets/B0CP8N31HK.PT01.jpg" onclick="switchImage('assets/B0CP8N31HK.PT01.jpg')">
+          <img src="assets/whychoose.jpg" onclick="switchImage('assets/whychoose.jpg')">
+          <img src="assets/ownedoperated.jpg" onclick="switchImage('assets/ownedoperated.jpg')">
         </div>
         
         <div id="overlay" onclick="hideOverlay()"></div>
