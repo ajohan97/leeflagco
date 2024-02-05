@@ -27,121 +27,121 @@
       align-items: center;
     }
 
-      .header {
-        width: 100%;
-        height:120px;
-        top: 0;
-        background-color: #ffffff;
-        border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
-        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
-        padding-top: 0rem;
-      }
-      .header-text-container{
-        display: flex;
-        height: 120px;
-        max-width: 1200px;
-        align-items: center;
-        justify-content: space-between;
-        color: #000000;
-        margin: 0 auto; /* Center the container within the page */
-      }
-      .left-text{
-        display:flex;
-        color: inherit;
-        text-decoration: none;
-        align-items: center;
-        justify-content: left;
-        font-size: 28px;
-      }
-      .left-text h2:hover {
+    .header {
+      width: 100%;
+      height:120px;
+      top: 0;
+      background-color: #ffffff;
+      border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
+      box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
+      padding-top: 0rem;
+    }
+    .header-text-container{
+      display: flex;
+      height: 120px;
+      max-width: 1200px;
+      align-items: center;
+      justify-content: space-between;
+      color: #000000;
+      margin: 0 auto; /* Center the container within the page */
+    }
+    .left-text{
+      display:flex;
+      color: inherit;
+      text-decoration: none;
+      align-items: center;
+      justify-content: left;
+      font-size: 28px;
+    }
+    .left-text h2:hover {
+      color: #FFCC00; /* Change the color to your desired hover color */
+      cursor: pointer; /* Change the cursor to pointer on hover */
+    }
+    .left-text img{
+      height: 100px; 
+      padding-right: 1rem;
+      object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
+      justify-content: center;
+    }      
+    .right-text{
+      display:flex;
+      color: inherit;
+      text-decoration: none;
+      text-align: right;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .right-text p {
+      padding-left: 1rem;
+      text-align: right;
+      font-size: 20px;
+      color: #000000;
+    }
+    .right-text p:hover {
         color: #FFCC00; /* Change the color to your desired hover color */
         cursor: pointer; /* Change the cursor to pointer on hover */
-      }
-      .left-text img{
-        height: 100px; 
-        padding-right: 1rem;
-        object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
-        justify-content: center;
-      }      
-      .right-text{
-        display:flex;
-        color: inherit;
-        text-decoration: none;
-        text-align: right;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-      }
-      .right-text p {
-        padding-left: 1rem;
-        text-align: right;
-        font-size: 20px;
-        color: #000000;
-      }
-      .right-text p:hover {
-          color: #FFCC00; /* Change the color to your desired hover color */
-          cursor: pointer; /* Change the cursor to pointer on hover */
-      }
+    }
 
-      .search-container {
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin-right: 50px;
-      }
-      .square-search-bar {
-        position: relative;
-        padding: 10px; /* Adjust padding for height */
-        width: 300px; /* Adjust width as needed */
-        border-radius: 0px; /* Add border-radius for a square appearance */
-        border: 1px solid #ccc; /* Add border for better visibility */
-      }
-      .search-icon {
-        cursor: pointer;
-        position: absolute;
-        right: 8px; /* Adjust the right position as needed */
-        height: 20px; /* Adjust height of the magnifying glass icon */
-        width: 20px; /* Adjust width of the magnifying glass icon */
-      }
+    .search-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-right: 50px;
+    }
+    .square-search-bar {
+      position: relative;
+      padding: 10px; /* Adjust padding for height */
+      width: 300px; /* Adjust width as needed */
+      border-radius: 0px; /* Add border-radius for a square appearance */
+      border: 1px solid #ccc; /* Add border for better visibility */
+    }
+    .search-icon {
+      cursor: pointer;
+      position: absolute;
+      right: 8px; /* Adjust the right position as needed */
+      height: 20px; /* Adjust height of the magnifying glass icon */
+      width: 20px; /* Adjust width of the magnifying glass icon */
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 30px; /* Set the gap size */
+      background-color: #ffffff;
+      justify-content: center;
+      padding: 50px;
+      /*margin-bottom: 400px;*/
+      width: 1000px;
+      height: auto;
+      /*padding-bottom: 15rem;*/
+    }
+    .grid-item {
+      padding: 0px;
+      text-align: start;
+      text-decoration: none; /* Remove underlining from anchor tags */
+      color: inherit; /* Inherit the color from the parent element */
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      padding-bottom: 0px;
+    }
+    .grid-item h3 {
+      margin: 10px;
+      text-decoration: underline;
+    }
+    .grid-item p {
+      margin: 5px;
+      padding-left: 10px;
+      padding-top: 0px;
+      font-size: 15px;
+      color: #000000;
+      /*font-weight: bold; /* Make the text bold */
+    }
 
-      .nav-bar {
-        display: flex;
-        width: 1200px;
-        padding: 5px;
-      }
-      
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 30px; /* Set the gap size */
-        background-color: #ffffff;
-        justify-content: center;
-        padding: 50px;
-        margin-bottom: 400px;
-        width: 1200px;
-        height: 100vh;
-        /*padding-bottom: 15rem;*/
-      }
-      .grid-item {
-        padding: 0px;
-        text-align: start;
-        text-decoration: none; /* Remove underlining from anchor tags */
-        color: inherit; /* Inherit the color from the parent element */
-      }
-      .grid-item img {
-        width: 100%;
-        height: auto;
-        padding-bottom: 0px;
-      }
-      .grid-item p{
-        margin-top: 0.5rem;
-        font-size: 15px;
-        color: #000000;
-        font-weight: bold; /* Make the text bold */
-      }
-
-      .footer {
+    .footer {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -192,6 +192,17 @@
 
     </style>
   </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1R12786N4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1R12786N4L');
+</script>
+
   <body>
     <div class="header">
       <div class="header-text-container">
@@ -213,6 +224,14 @@
       </div>
     </div>
 
+    <style>
+      .nav-bar {
+        display: flex;
+        width: 1200px;
+        padding: 5px;
+      }
+    </style>
+
     <div class="nav-bar">
       <div style="display: flex; align-items: center; justify-content: flex-start;">
         <p onclick="window.location.href='home.html';" style="text-decoration: underline;">Home</p>
@@ -222,115 +241,276 @@
     </div>
   
 
+    <style>
 
+      .wrapper {
+        display: flex;
+      }
 
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        width: 200px;
+      }
 
-    <div class="grid-container">
+      #filter-button {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 20px;
+        display: inline-block;
+        padding: 15px 0;
+        width: 100px; 
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid #1c1c1c; /* Add a 2px solid border with the same color as the background */
+        border-radius: 0px; /* Set border-radius for a rounded rectangle */
+        color: #000000; /* Text color */
+        background-color: #ffffff; /* Background color */
+        transition: background-color 0.3s ease;
+      }
 
-      <a href="010-WEWANTBEER.html" class="grid-item">
-        <img src="assets/B0CP8N31HK.MAIN.jpg" alt="We Want Beer Flag">
-        <p>We Want Beer Flag</p>
-      </a>
-      
-      <a href="011-PROENDSATLAST.html" class="grid-item">
-          <img src="assets/B0CP8MZJWB.MAIN.jpg" alt="Prohibition Ends At Last Flag">
-          <p>Prohibition Ends At Last Flag</p>
-      </a>
-      
-      <!--
-      <a href="012-RECSLAMBEERS.html" class="grid-item">
-          <img src="assets/B0CPB63Q25.MAIN.jpg" alt="Image 3">
-          <p>Recommends Slamming Beers Flag 3' x 5' For Dorm Room, Bar, Gym, Man Cave, Home Office or Garage by Lee Flag Co.</p>
-      </a>
-      -->
-      
-      <a href="013-DRINKTOKEEPGOING.html" class="grid-item">
-          <img src="assets/B0CPB5H28X.MAIN.jpg" alt="Runescape Drink To Keep Going Flag">
-          <p>Runescape Drink To Keep Going Flag</p>
-      </a>
-      
-      <a href="014-IRONSHARPENSIRON.html" class="grid-item">
-          <img src="assets/B0CPB6184G.MAIN.jpg" alt="Iron Sharpens Iron Flag">
-          <p>Iron Sharpens Iron Flag</p>
-      </a>
-      
-      <a href="015-BAB.html" class="grid-item">
-          <img src="assets/B0CPB643ND.MAIN.jpg" alt="The Official Boys Are Buzzin' Flag">
-          <p>The Official Boys Are Buzzin' Flag</p>
-      </a>
-      
-      <a href="016-ATTITUDECHOICESEFFORT.html" class="grid-item">
-          <img src="assets/B0CPB5Y2VW.MAIN.jpg" alt="Attitude Choices Effort Motivational Flag">
-          <p>Attitude Choices Effort Motivational Flag</p>
-      </a>
-      
-      <a href="017-DIESOBER.html" class="grid-item">
-          <img src="assets/B0CPB68LFQ.MAIN.jpg" alt="I Will Not Die Sober Flag">
-          <p>I Will Not Die Sober Flag</p>
-      </a>
-      
-      <a href="018-TAT.html" class="grid-item">
-          <img src="assets/B0CPB5D4QN.MAIN.jpg" alt="Trans America Trail Flag">
-          <p>Trans America Trail Flag</p>
-      </a>
-      
-      <a href="019-NOKARENSALLOWED.html" class="grid-item">
-          <img src="assets/B0CPB51THL.MAIN.jpg" alt="No Karens Allowed Flag">
-          <p>No Karens Allowed Flag</p>
-      </a>
-      
-      <a href="020-LOWRIDER.html" class="grid-item">
-          <img src="assets/B0CQ3L2LGK.MAIN.jpg" alt="Retro Lowrider Flag">
-          <p>Retro Lowrider Flag</p>
-      </a>
-      
-      <a href="021-FCOMM.html" class="grid-item">
-          <img src="assets/B0CQPSXWYP.MAIN.jpg" alt="Fuck Communism Flag">
-          <p>Fuck Communism Flag</p>
-      </a>
+      #filter-button:hover {
+        background-color: #1c1c1c; /* Hover background color */
+        color: #ffffff;      
+      }
 
-      <a href="022-LUNCHATOPNYC.html" class="grid-item">
-          <img src="assets/B0CQPPW3TR.MAIN.jpg" alt="Lunch Atop a Skyscrapper Flag">
-          <p>Lunch Atop a Skyscrapper Flag</p>
-      </a>
+      label {
+        margin-bottom: 10px;
+      }
 
-      <a href="025-GOLFUSA.html" class="grid-item">
-          <img src="assets/B0CQS1HJS2.MAIN.jpg" alt="Golf USA Flag">
-          <p>Golf USA Flag</p>
-      </a>
+      /* Style the select element */
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        font-size: 14px;
+        outline: none;
+        margin-bottom: 10px;
+      }
 
-      <a href="023-GEORGEWASH-A.html" class="grid-item">
-        <img src="assets/B0CT49BFKT.MAIN.jpg" alt="George Washington Flag (Design A)">
-        <p>George Washington Flag (Design A)</p>
-      </a>
+      /* Style the options within the dropdown */
+      select option {
+        background-color: #fff;
+        color: #333;
+        font-size: 14px;
+      }
 
-      <a href="024-ALKHARIDGATE.html" class="grid-item">
-        <img src="assets/B0CT49ZXJ2.MAIN.jpg" alt="Runesacpe Al Kharid Gate Flag">
-        <p>Runesacpe Al Kharid Gate Flag</p>
-      </a>
+      /* Remove default arrow in some browsers (e.g., Chrome) */
+      select::-ms-expand {
+        display: none;
+      }
 
-      <a href="027-DOGINME.html" class="grid-item">
-        <img src="assets/B0CT4B26TH.MAIN.jpg" alt="I Got That Dog In Me Flag">
-        <p>I Got That Dog In Me Flag</p>
-      </a>
+      /* Style the dropdown arrow icon */
+      select::after {
+        content: '\25BC'; /* Unicode character for the down arrow */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
 
-      <a href="026-GEORGEWASH-B.html" class="grid-item">
-        <img src="assets/B0CT47RSZB.MAIN.jpg" alt="George Washington Flag (Design B)">
-        <p>George Washington Flag (Design B)</p>
-      </a>
+      .content-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 0px;
+      }
 
-      <a href="028-BIDENPAYMORE.html" class="grid-item">
-        <img src="assets/B0CT493S3P.MAIN.jpg" alt="Biden Pay More Live Worse Flag">
-        <p>Biden Pay More Live Worse Flag</p>
-      </a>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    </style>
 
-      <a href="029-CAUCASIANS.html" class="grid-item">
-        <img src="assets/B0CT47JJ86.MAIN.jpg" alt="Csucasians Flag">
-        <p>Csucasians Flag</p>
-      </a>
+  <div class="wrapper">
+    <div class="sidebar">
+
+      <h3>Sort By:</h3>
+      <label for="sort-dropdown" class="visually-hidden">Sort By:</label>
+      <select id="sort-dropdown">
+        <!-- <option value="default">Default</option> -->
+        <option value="bestselling">Best Selling</option>
+        <option value="name">Alphabetical (A to Z)</option>
+        <option value="name-reverse">Alphabetical (Z to A)</option>
+        <option value="price-low">Price (Lowest to Highest)</option>
+        <option value="price-high">Price (Highest to Lowest)</option>
+        <option value="newest">Date: Newest to Oldest)</option>
+        <option value="oldest">Date: Oldest to Newest)</option>
+      </select>
+
+      <h3>Filter</h3>
+      <label for="category-dropdown">Category:</label>
+      <select id="category-dropdown">
+        <option value="all">All Categories</option>
+        <option value="automotive">Automotive</option>
+        <option value="drinking">Drinking</option>
+        <option value="gaming">Gaming</option>
+        <option value="motivational">Motivational</option>
+        <option value="political">Political</option>
+        <option value="sports">Sports</option>
+      </select>
+
+      <label for="material-dropdown">Material:</label>
+      <select id="material-dropdown">
+        <option value="all">All Materials</option>
+        <option value="100D Polyester">100D Polyester</option>
+      </select>
+
+      <label for="size-dropdown">Size:</label>
+      <select id="size-dropdown">
+        <option value="all">All Sizes</option>
+        <option value="3' x 5'">3' x 5'</option>
+      </select>
+
+      <button id="filter-button" onclick="searchAndFilterFunction()">Apply</button>
 
     </div>
 
+    <div class="content-container">
+      <div class="grid-container">
+        <a id="010-WEWANTBEER" href="010-WEWANTBEER.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="10">
+          <img src="assets/B0CP8N31HK.MAIN.jpg" alt="We Want Beer Flag">
+          <h3>We Want Beer Flag</h3>
+        </a>
+        
+        <a id="011-PROENDSATLAST" href="011-PROENDSATLAST.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="11">
+          <img src="assets/B0CP8MZJWB.MAIN.jpg" alt="Prohibition Ends At Last Flag">
+          <h3>Prohibition Ends At Last Flag</h3>
+        </a>
+        
+        <a id="012-RECSLAMBEERS" href="012-RECSLAMBEERS.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="12">
+          <img src="assets/B0CPB63Q25.MAIN.jpg" alt="Recommends Slamming Beers Flag">
+          <h3>Recommends Slamming Beers Flag</h3>
+        </a>
+        
+        <a id="013-DRINKTOKEEPGOING" href="013-DRINKTOKEEPGOING.html" class="grid-item" data-category="gaming" data-material="100D Polyester" data-size="3' x 5'" data-price="$24.99" data-date="13">
+          <img src="assets/B0CPB5H28X.MAIN.jpg" alt="Runescape Drink To Keep Going Flag">
+          <h3>Runescape Drink To Keep Going Flag</h3>
+        </a>
+        
+        <a id="014-IRONSHARPENSIRON" href="014-IRONSHARPENSIRON.html" class="grid-item" data-category="motivational" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="14">
+          <img src="assets/B0CPB6184G.MAIN.jpg" alt="Iron Sharpens Iron Flag">
+          <h3>Iron Sharpens Iron Flag</h3>
+        </a>
+        
+        <a id="015-BAB" href="015-BAB.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="15">
+          <img src="assets/B0CPB643ND.MAIN.jpg" alt="The Official Boys Are Buzzin' Flag">
+          <h3>The Official Boys Are Buzzin' Flag</h3>
+        </a>
+        
+        <a id="016-ATTITUDECHOICESEFFORT" href="016-ATTITUDECHOICESEFFORT.html" class="grid-item" data-category="motivational" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="16">
+          <img src="assets/B0CPB5Y2VW.MAIN.jpg" alt="Attitude Choices Effort Motivational Flag">
+          <h3>Attitude Choices Effort Motivational Flag</h3>
+        </a>
+        
+        <a id="017-DIESOBER" href="017-DIESOBER.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="17">
+          <img src="assets/B0CPB68LFQ.MAIN.jpg" alt="I Will Not Die Sober Flag">
+          <h3>I Will Not Die Sober Flag</h3>
+        </a>
+        
+        <a id="018-TAT" href="018-TAT.html" class="grid-item" data-category="automotive" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="18">
+          <img src="assets/B0CPB5D4QN.MAIN.jpg" alt="Trans America Trail Flag">
+          <h3>Trans America Trail Flag</h3>
+        </a>
+        
+        <a id="019-NOKARENSALLOWED" href="019-NOKARENSALLOWED.html" class="grid-item" data-category="political" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="19">
+          <img src="assets/B0CPB51THL.MAIN.jpg" alt="No Karens Allowed Flag">
+          <h3>No Karens Allowed Flag</h3>
+        </a>
+        
+        <a id="020-LOWRIDER" href="020-LOWRIDER.html" class="grid-item" data-category="automotive" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="20">
+          <img src="assets/B0CQ3L2LGK.MAIN.jpg" alt="Retro Lowrider Flag">
+          <h3>Retro Lowrider Flag</h3>
+        </a>
+        
+        <a id="021-FCOMM" href="021-FCOMM.html" class="grid-item" data-category="political" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="21">
+          <img src="assets/B0CQPSXWYP.MAIN.jpg" alt="Fuck Communism Flag">
+          <h3>Fuck Communism Flag</h3>
+        </a>
+        
+        <a id="022-LUNCHATOPNYC" href="022-LUNCHATOPNYC.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="22">
+          <img src="assets/B0CQPPW3TR.MAIN.jpg" alt="Lunch Atop a Skyscraper Flag">
+          <h3>Lunch Atop a Skyscraper Flag</h3>
+        </a>
+        
+        <a id="023-GEORGEWASH-A" href="023-GEORGEWASH-A.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="23">
+          <img src="assets/B0CT49BFKT.MAIN.jpg" alt="George Washington Flag (Design A)">
+          <h3>George Washington Flag (Design A)</h3>
+        </a>
+        
+        <a id="024-ALKHARIDGATE" href="024-ALKHARIDGATE.html" class="grid-item" data-category="gaming" data-material="100D Polyester" data-size="3' x 5'" data-price="$24.99" data-date="24">
+          <img src="assets/B0CT49ZXJ2.MAIN.jpg" alt="Runescape Al Kharid Gate Flag">
+          <h3>Runescape Al Kharid Gate Flag</h3>
+        </a>
+        
+        <a id="025-GolfUSA" href="025-GolfUSA.html" class="grid-item" data-category="sports" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="25">
+          <img src="assets/B0CQS1HJS2.MAIN.jpg" alt="Golf USA Flag">
+          <h3>Golf USA Flag</h3>
+        </a>
+        
+        <a id="026-GEORGEWASH-B" href="026-GEORGEWASH-B.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="26">
+          <img src="assets/B0CT47RSZB.MAIN.jpg" alt="George Washington Flag (Design B)">
+          <h3>George Washington Flag (Design B)</h3>
+        </a>
+        
+        <a id="027-DOGINME" href="027-DOGINME.html" class="grid-item" data-category="drinking" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="27">
+          <img src="assets/B0CT4B26TH.MAIN.jpg" alt="I Got That Dog In Me Flag">
+          <h3>I Got That Dog In Me Flag</h3>
+        </a>
+        
+        <a id="028-BIDENPAYMORE" href="028-BIDENPAYMORE.html" class="grid-item" data-category="political" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="28">
+          <img src="assets/B0CT493S3P.MAIN.jpg" alt="Biden Pay More Live Worse Flag">
+          <h3>Biden Pay More Live Worse Flag</h3>
+        </a>
+        
+        <a id="029-CAUCASIANS" href="029-CAUCASIANS.html" class="grid-item" data-category="political" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="29">
+          <img src="assets/B0CT47JJ86.MAIN.jpg" alt="Caucasians Flag">
+          <h3>Caucasians Flag</h3>
+        </a>
+
+      </div>
+
+       <!-- Add this script to display data-price -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all elements with the class 'grid-item'
+      var gridItems = document.querySelectorAll('.grid-item');
+
+      // Iterate through each grid item
+      gridItems.forEach(function (item) {
+        // Get the value of the 'data-price' attribute
+        var price = item.getAttribute('data-price');
+
+        // Create a new element to display the price
+        var priceElement = document.createElement('p');
+        priceElement.textContent = price;
+
+        // Append the price element to the grid item
+        item.appendChild(priceElement);
+      });
+    });
+  </script>
+
+    </div>
+    </div>
     <div class="footer">
       <div class="footer-container">
         <div class="footer-column-left">
@@ -354,6 +534,118 @@
 
     
   <script>
+
+  // Sort by bestselling when the page first loads
+  document.addEventListener('DOMContentLoaded', function() {
+    // Trigger the change event with the 'bestselling' value
+    document.getElementById('sort-dropdown').value = 'bestselling';
+    // Create and dispatch a new event to simulate the change
+    var event = new Event('change');
+    document.getElementById('sort-dropdown').dispatchEvent(event);
+  });
+
+  //Sort Function
+  document.getElementById('sort-dropdown').addEventListener('change', function() {
+      // Get the selected value from the dropdown
+      var sortBy = this.value;
+
+      // Get all grid items
+      var gridItems = document.querySelectorAll('.grid-item');
+
+      // Convert NodeList to an array
+      var gridItemsArray = Array.from(gridItems);
+
+      var salesData = {
+        '013-DRINKTOKEEPGOING': 1,
+        '014-IRONSHARPENSIRON': 2,
+        '011-PROENDSATLAST': 3,
+        '020-LOWRIDER': 4,
+        '025-GOLFUSA': 5,
+        '016-ATTITUDECHOICESEFFORT': 6,
+        '021-FCOMM': 7,
+        '010-WEWANTBEER': 8,
+        '022-LUNCHATOPNYC': 9,
+        '012-RECSLAMBEERS': 10,
+        '015-BAB': 11,
+        '017-DIESOBER': 12,
+        '018-TAT': 13,
+        '019-NOKARENSALLOWED': 14,
+        '023-GEORGEWASH-A': 15,
+        '024-ALKHARIDGATE': 16,
+        '026-GEORGEWASH-B': 17,
+        '027-DOGINME': 18,
+        '028-BIDENPAYMORE': 19,
+        '029-CAUCASIANS': 20
+      };
+
+      // Sort the array based on the selected sorting option
+      if (sortBy === 'bestselling') {
+      // Sorting by bestselling (highest sales volume to lowest)
+        gridItemsArray.sort(function (a, b) {
+          var flagA = a.id; // Assuming each grid item has an ID corresponding to the flag
+          var flagB = b.id;
+          var salesVolumeA = salesData[flagA];
+          var salesVolumeB = salesData[flagB];
+          return salesVolumeA - salesVolumeB;
+        });
+      } else if (sortBy === 'name') {
+        // Sorting alphabetically (A to Z)
+        gridItemsArray.sort(function(a, b) {
+          var textA = a.querySelector('h3').textContent.toUpperCase();
+          var textB = b.querySelector('h3').textContent.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+      } else if (sortBy === 'name-reverse') {
+        // Sorting alphabetically (Z to A)
+        gridItemsArray.sort(function(a, b) {
+          var textA = a.querySelector('h3').textContent.toUpperCase();
+          var textB = b.querySelector('h3').textContent.toUpperCase();
+          return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+        });
+      } else if (sortBy === 'price-high') {
+        // Sorting by price (Highest to Lowest)
+        gridItemsArray.sort(function(a, b) {
+          var priceA = parseFloat(a.dataset.price.replace('$', ''));
+          var priceB = parseFloat(b.dataset.price.replace('$', ''));
+          return priceB - priceA;
+        });
+      } else if (sortBy === 'price-low') {
+        // Sorting by price (Lowest to Highest)
+        gridItemsArray.sort(function(a, b) {
+          var priceA = parseFloat(a.dataset.price.replace('$', ''));
+          var priceB = parseFloat(b.dataset.price.replace('$', ''));
+          return priceA - priceB;
+        });
+      } else if (sortBy === 'newest') {
+        // Sorting by newest (Newest to Oldest)
+        gridItemsArray.sort(function(a, b) {
+          var dateA = new Date(parseInt(a.getAttribute('data-date')));
+          var dateB = new Date(parseInt(b.getAttribute('data-date')));
+          return dateB - dateA;
+        });
+      } else if (sortBy === 'oldest') {
+        // Sorting by oldest (Oldest to Newest)
+        gridItemsArray.sort(function(a, b) {
+          var dateA = new Date(parseInt(a.getAttribute('data-date')));
+          var dateB = new Date(parseInt(b.getAttribute('data-date')));
+          return dateA - dateB;
+        });
+      } else {
+        // Default sorting
+        // You can set a default sorting option or do nothing here
+      }
+
+      // Clear the content container
+      var contentContainer = document.querySelector('.content-container .grid-container');
+      contentContainer.innerHTML = '';
+
+      // Append sorted grid items to the content container
+      gridItemsArray.forEach(function(item) {
+        contentContainer.appendChild(item);
+      });
+    });
+
+
     // Function to get the value of a query parameter from the URL
     function getQueryParam(name) {
       const urlParams = new URLSearchParams(window.location.search);
@@ -366,38 +658,54 @@
     // If the search term is present, perform the search using searchTermFromUrl
     if (searchTermFromUrl) {
       document.getElementById('search-bar').value = searchTermFromUrl;
-      performSearch(searchTermFromUrl);
+      performSearchAndFilter(searchTermFromUrl);
     }
 
-    // Function to perform the search and filter items
-    function performSearch(searchTerm) {
-      const gridItems = document.querySelectorAll('.grid-item');
+  // Function to perform the search and filter items
+  function performSearchAndFilter(searchTerm, category, material, size) {
+    const gridItems = document.querySelectorAll('.grid-item');
 
-      // Loop through each grid item and check if it contains the search term
-      gridItems.forEach(function(item) {
-        const title = item.querySelector('p').innerText.toLowerCase();
+    // Loop through each grid item and check if it meets the filtering criteria
+    gridItems.forEach(function(item) {
+      const title = item.querySelector('p').innerText.toLowerCase();
+      const itemCategory = item.getAttribute('data-category').toLowerCase();
+      const itemMaterial = item.getAttribute('data-material').toLowerCase();
+      const itemSize = item.getAttribute('data-size').toLowerCase();
 
-        // If the title contains the search term, show the item, otherwise hide it
-        if (title.includes(searchTerm.toLowerCase())) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    // Function to handle Enter key press
-    function handleKeyPress(event) {
-      if (event.key === 'Enter') {
-        searchFunction();
+      // If the title contains the search term and the item matches the selected filters, show the item, otherwise hide it
+      if (
+        title.includes(searchTerm.toLowerCase()) &&
+        (category === 'all' || itemCategory === category) &&
+        (material === 'all' || itemMaterial.toLowerCase() === material.toLowerCase()) && // Ensure case-insensitive comparison
+        (size === 'all' || itemSize === size)
+      ) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
       }
-    }
+    });
+  }
 
-    // Function to perform the search when clicking the magnifying glass
-    function searchFunction() {
-      const searchTerm = document.getElementById('search-bar').value;
-      performSearch(searchTerm);
+  // Function to handle Enter key press
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      searchAndFilterFunction();
     }
+  }
+
+  // Function to perform the search and filtering when clicking the magnifying glass
+  function searchAndFilterFunction() {
+    const searchTerm = document.getElementById('search-bar').value;
+    const categoryDropdown = document.getElementById('category-dropdown');
+    const materialDropdown = document.getElementById('material-dropdown');
+    const sizeDropdown = document.getElementById('size-dropdown');
+
+    const selectedCategory = categoryDropdown.value;
+    const selectedMaterial = materialDropdown.value;
+    const selectedSize = sizeDropdown.value;
+
+    performSearchAndFilter(searchTerm, selectedCategory, selectedMaterial, selectedSize);
+  }
   </script>
 
   </body>
