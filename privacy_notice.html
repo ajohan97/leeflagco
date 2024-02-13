@@ -4,7 +4,7 @@
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
@@ -23,104 +23,171 @@
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
-      font-family: Arial,Helvetica,sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       margin: auto;
       align-items: center;
     }
 
-      .header {
-        width: 100%;
-        height:120px;
-        top: 0;
-        background-color: #ffffff;
-        border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
-        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
-        padding-top: 0rem;
-      }
-      .header-text-container{
-        display: flex;
-        height: 120px;
-        max-width: 1200px;
-        align-items: center;
-        justify-content: space-between;
-        color: #000000;
-        margin: 0 auto; /* Center the container within the page */
-      }
-      .left-text{
-        display:flex;
-        color: inherit;
-        text-decoration: none;
- 
-        align-items: center;
-        justify-content: left;
-        font-size: 28px;
-      }
-      .left-text h2:hover {
-          color: #FFCC00; /* Change the color to your desired hover color */
-          cursor: pointer; /* Change the cursor to pointer on hover */
-      }
-      .left-text img{
-        height: 100px; 
-        padding-right: 1rem;
-        object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
-        justify-content: center;
-      }      
-      .right-text{
-        display:flex;
-        color: inherit;
-        text-decoration: none;
-        text-align: right;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-      }
-      .right-text p {
-        padding-left: 1rem;
-        text-align: right;
-        font-size: 20px;
-    
-      }
-      .right-text p:hover {
-          color: #FFCC00; /* Change the color to your desired hover color */
-          cursor: pointer; /* Change the cursor to pointer on hover */
-      }
+    .header {
+      width: 100%;
+      height: 120px;
+      top: 0;
+      background-color: #ffffff;
+      border-bottom: 0.1rem solid #1c1c1c;
+      ;
+      /* Adjust the alpha value */
+      box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
+      /* Add a shadow effect */
+      padding-top: 0rem;
+    }
+
+    .header-text-container {
+      display: flex;
+      height: 120px;
+      max-width: 1200px;
+      align-items: center;
+      justify-content: space-between;
+      color: #000000;
+      margin: 0 auto;
+      /* Center the container within the page */
+    }
+
+    .left-text {
+      display: flex;
+      color: inherit;
+      text-decoration: none;
+
+      align-items: center;
+      justify-content: left;
+      font-size: 28px;
+    }
+
+    .left-text h2:hover {
+      color: #FFCC00;
+      /* Change the color to your desired hover color */
+      cursor: pointer;
+      /* Change the cursor to pointer on hover */
+    }
+
+    .left-text img {
+      height: 100px;
+      padding-right: 1rem;
+      object-fit: contain;
+      /* Choose 'contain' or 'cover' based on your preference */
+      justify-content: center;
+    }
+
+    .right-text {
+      display: flex;
+      color: inherit;
+      text-decoration: none;
+      text-align: right;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .right-text p {
+      padding-left: 1rem;
+      text-align: right;
+      font-size: 20px;
+
+    }
+
+    .right-text p:hover {
+      color: #FFCC00;
+      /* Change the color to your desired hover color */
+      cursor: pointer;
+      /* Change the cursor to pointer on hover */
+    }
+
+    .shop-icon {
+      display: none;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-right: 50px;
+    }
+
+    .square-search-bar {
+      position: relative;
+      padding: 10px;
+      /* Adjust padding for height */
+      width: 300px;
+      /* Adjust width as needed */
+      border-radius: 0px;
+      /* Add border-radius for a square appearance */
+      border: 1px solid #ccc;
+      /* Add border for better visibility */
+    }
+
+    .search-icon {
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      /* Adjust the right position as needed */
+      height: 20px;
+      /* Adjust height of the magnifying glass icon */
+      width: 20px;
+      /* Adjust width of the magnifying glass icon */
+    }
+
+    .nav-bar {
+      display: flex;
+      width: 1200px;
+      padding: 5px;
+    }
 
     .privacy-section {
-      background-color: #1c1c1c; /* Background color for the about section */
+      background-color: #1c1c1c;
+      /* Background color for the about section */
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%
     }
-    .privacy-section-text-container{
-      width: 700px; /* Set a fixed width */
+
+    .privacy-section-text-container {
+      width: 700px;
+      /* Set a fixed width */
       text-align: center;
       margin-top: 50px;
       margin-bottom: 200px;
     }
+
     .privacy-section h1 {
       color: #ffffff;
       text-align: center;
     }
+
     .privacy-section h2 {
       color: #ffffff;
       text-align: center;
     }
+
     .privacy-section h3 {
       color: #dcdcdc;
       text-align: left;
     }
+
     .privacy-section li {
       color: #dcdcdc;
       text-align: left;
     }
+
     .privacy-section p {
       color: #cbcbcb;
-      font-size: 16px; /* Adjust font size as needed */
-      line-height: 1.6; /* Adjust line height as needed */
+      font-size: 16px;
+      /* Adjust font size as needed */
+      line-height: 1.6;
+      /* Adjust line height as needed */
       text-align: left;
-      margin-bottom: 25px; /* Adjust the margin as needed */
-  }
+      margin-bottom: 25px;
+      /* Adjust the margin as needed */
+    }
 
     .footer {
       display: flex;
@@ -137,40 +204,252 @@
       margin-bottom: 0;
       width: 100%;
     }
+
     .footer-container {
-      width: 1200px;  
+      width: 1200px;
       display: flex;
       align-items: center;
     }
+
     .footer-column-left {
       width: 400px;
       padding: 0rem;
       text-align: left;
     }
+
     .footer-column-center {
       width: 400px;
       padding: 0rem;
-      align-items:center;
+      align-items: center;
       justify-content: left;
     }
+
     .footer-column-center-text-container {
       text-align: center;
     }
-    .footer-column-right{
+
+    .footer-column-right {
       width: 400px;
     }
+
     .footer p {
       margin: 0.25rem 0;
       text-align: center;
       font-size: 12px;
     }
+
     .footer a {
       color: inherit;
     }
+
     .footer img {
       max-height: 150px;
     }
-    
+
+    @media (max-width: 768px) {
+
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: center;
+        max-width: 100%;
+      }
+
+      .header {
+        width: 100%;
+        height: 75px;
+        top: 0;
+        align-items: center;
+        background-color: #ffffff;
+        border-bottom: 0.1rem solid #1c1c1c;
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
+      }
+
+      .header-text-container {
+        display: flex;
+        height: 75px;
+        max-width: 360px;
+        align-items: center;
+        justify-content: flex-start;
+        color: #000000;
+        margin: none;
+      }
+
+      .left-text {
+        display: flex;
+        color: inherit;
+        text-decoration: none;
+        align-items: center;
+        justify-content: left;
+        font-size: 11px;
+        padding: 10px;
+        padding-right: 5px;
+        max-width: 185px;
+      }
+
+      .left-text h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .left-text img {
+        height: 50px;
+        width: 50px;
+        padding: 0rpx;
+        padding-right: 0px;
+        object-fit: contain;
+        justify-content: center;
+      }
+
+      .right-text {
+        justify-content: space-evenly;
+        align-items: center;
+        width: 150px;
+        max-width: 150px;
+      }
+
+      /* Hide the "About" and "Contact" links on small screens */
+      .right-text p:not(:first-child) {
+        display: none;
+      }
+
+      .shop-icon {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background: url('assets/shop_icon.png') no-repeat center center;
+        background-size: cover;
+        /* Adjust as needed */
+        cursor: pointer;
+      }
+
+      .search-container {
+        align-items: center;
+        position: relative;
+        width: 50px;
+        /* Adjust width as needed */
+      }
+
+      .square-search-bar {
+        /*display: none;*/
+        position: relative;
+        padding: 10px;
+        /* Adjust padding for height */
+        width: 50px;
+        /* Adjust width as needed */
+        border-radius: 0px;
+        /* Add border-radius for a square appearance */
+        border: 1px solid #ccc;
+        /* Add border for better visibility */
+      }
+
+      .search-icon {
+        cursor: pointer;
+        position: relative;
+        right: 0px;
+        /* Adjust the right position as needed */
+        height: 20px;
+        /* Adjust height of the magnifying glass icon */
+        width: 20px;
+        /* Adjust width of the magnifying glass icon */
+        padding: 5px;
+      }
+
+      .nav-bar {
+        width: 300px;
+        padding: 0px;
+        /*padding-left: 30px;*/
+      }
+
+      .privacy-section {
+        background-color: #1c1c1c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .privacy-section-text-container {
+        width: 360px;
+        max-width: 700px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+      .privacy-section h1,
+      .privacy-section h2 {
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .privacy-section h3,
+      .privacy-section li,
+      .privacy-section p {
+        color: #dcdcdc;
+        text-align: left;
+      }
+
+      .privacy-section h1{
+        font-size: 24px;
+      }
+      .privacy-section h2{
+        font-size: 18px;
+      }
+      .privacy-section h3{
+        font-size: 16px;
+      }
+      
+
+      .privacy-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        /* Reduced margin for mobile */
+      }
+
+      .footer {
+        width: 100%;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+      }
+
+      .footer-container {
+        width: 360px;
+        display: flex;
+        /*flex-direction:column; /* Adjusted for mobile */
+        align-items: center;
+      }
+
+      .footer-column-left,
+      .footer-column-right {
+        width: 60px;
+        /* Full width on mobile */
+        padding: 0rem;
+        text-align: center;
+      }
+
+      .footer-column-center {
+        width: 240px;
+        /* Full width on mobile */
+        padding: 0rem;
+        text-align: center;
+      }
+
+      .footer p {
+        text-align: center;
+        font-size: 12px;
+      }
+
+      .footer a {
+        color: inherit;
+      }
+
+      .footer img {
+        max-height: 65px;
+      }
+    }
   </style>
 </head>
 
@@ -178,111 +457,120 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R12786N4L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-1R12786N4L');
 </script>
 
 <body>
-    <div class="header">
-      <div class="header-text-container">
-        <div class="left-text">
-          <img src="assets/LeeFlagCo_logo_whiteout.png" alt="Lee Flag Co" onclick="window.location.href='home.html';"> 
-          <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
+  <div class="header">
+    <div class="header-text-container">
+      <div class="left-text">
+        <img src="assets/LeeFlagCo_logo_whiteout.png" alt="Lee Flag Co" onclick="window.location.href='home.html';">
+        <h2 onclick="window.location.href='home.html';">LeeFlagCo.com</h2>
+      </div>
+      <div class="right-text">
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar"
+            onkeypress="handleKeyPress(event)">
+          <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon"
+            onclick="searchFunction()">
         </div>
-        <div class="right-text">
-          <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar" onkeypress="handleKeyPress(event)">
-            <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon" onclick="searchFunction()">
-          </div>
+        <div class="shop-icon" onclick="window.location.href='shop.html';"></div>
 
-          <style>
-                .search-container {
-                  display: flex;
-                  align-items: center;
-                  position: relative;
-                  margin-right: 50px;
-                }
-                .square-search-bar {
-                  position: relative;
-                  padding: 10px; /* Adjust padding for height */
-                  width: 300px; /* Adjust width as needed */
-                  border-radius: 0px; /* Add border-radius for a square appearance */
-                  border: 1px solid #ccc; /* Add border for better visibility */
-                }
-                .search-icon {
-                  cursor: pointer;
-                  position: absolute;
-                  right: 8px; /* Adjust the right position as needed */
-                  height: 20px; /* Adjust height of the magnifying glass icon */
-                  width: 20px; /* Adjust width of the magnifying glass icon */
-                }
-          </style>
-
-          <p onclick="window.location.href='shop.html';">Shop</p>
-          <p onclick="window.location.href='about.html';">About</p>
-          <p onclick="window.location.href='contact.html';">Contact</p>
-        </div>
+        <p onclick="window.location.href='shop.html';">Shop</p>
+        <p onclick="window.location.href='about.html';">About</p>
+        <p onclick="window.location.href='contact.html';">Contact</p>
       </div>
     </div>
-
-    <div class="privacy-section">
-      <div class="privacy-section-text-container">
-          <h1>PRIVACY <span style="color: #FFCC00;">POLICY</span></h1>
-  
-          <p>Last Updated: February 5, 2024</p>
-  
-          <p>Thank you for visiting LeeFlagCo.com ("we," "us," or "our"). Your privacy is important to us, and we want you to feel comfortable using our website. This Privacy Policy outlines the types of information we collect, how we use any user data, and the limited circumstances under which we may disclose non-personal information.</p>
-  
-          <h2>Information We Collect:</h2>
-  
-          <ol>
-              <li>
-                  <h3>Personal Information:</h3>
-                  <p>We do not collect any personally identifiable information such as names, addresses, phone numbers, or email addresses.</p>
-              </li>
-              <li>
-                  <h3>User Data:</h3>
-                  <p>We do not collect or store any data related to your browsing activities on our website.</p>
-              </li>
-              <li>
-                  <h3>Cookies:</h3>
-                  <p>We do not use cookies or any similar tracking technologies to collect information about your online activities. However, please note that third-party services, such as Google Analytics, may use cookies as described in the section below.</p>
-              </li>
-              <li>
-                  <h3>User Input:</h3>
-                  <p>We do not request or require any user input on our website.</p>
-              </li>
-              <li>
-                  <h3>Anonymous Non-Personal Information:</h3>
-                  <p>We may collect anonymous non-personal information, such as general demographic and statistical data, to enhance and improve the functionality of our website. This information is collected in a way that does not personally identify you. By using our website, you consent to the collection of this anonymous non-personal information for analytical and improvement purposes.</p>
-              </li>
-          </ol>
-  
-          <h2>Use of Google Analytics:</h2>
-  
-          <p>We use Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses cookies to help us analyze how users interact with our website. The information generated by the cookie about your use of our website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators, and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. You may refuse the use of cookies by selecting the appropriate settings on your browser; however, please note that if you do this, you may not be able to use the full functionality of our website. By using our website, you consent to the processing of data about you by Google in the manner and for the purposes set out above.</p>
-  
-          <h2>Disclosure of Non-Personal Information:</h2>
-  
-          <p>We may disclose aggregated, anonymized, or non-personal information about our website visitors in a manner that does not identify individuals. This information may be shared with third parties for analytics, research, or other purposes.</p>
-  
-          <h2>Third-Party Links:</h2>
-  
-          <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to read the privacy policies of any linked websites.</p>
-  
-          <h2>Changes to This Privacy Policy:</h2>
-  
-          <p>We reserve the right to update or change this Privacy Policy at any time. Any changes will be effective immediately upon posting the updated policy on our website.</p>
-  
-          <h2>Contact Us:</h2>
-  
-          <p>If you have any questions about this Privacy Policy, you can contact us at info@LeeFlagCo.com.</p>
-  
-      </div>
   </div>
-  
+
+  <div class="nav-bar">
+    <div style="display: flex; align-items: center; justify-content: flex-start;">
+      <p onclick="window.location.href='home.html';" style="text-decoration: underline;">Home</p>
+      <span style="margin: 0 0.5rem;">/</span>
+      <p onclick="window.location.href='privacy_notice.html';" style="text-decoration: underline;">Privacy Policy</p>
+    </div>
+  </div>
+
+  <div class="privacy-section">
+    <div class="privacy-section-text-container">
+      <h1>PRIVACY <span style="color: #FFCC00;">POLICY</span></h1>
+
+      <p>Last Updated: February 5, 2024</p>
+
+      <p>Thank you for visiting LeeFlagCo.com ("we," "us," or "our"). Your privacy is important to us, and we want you
+        to feel comfortable using our website. This Privacy Policy outlines the types of information we collect, how we
+        use any user data, and the limited circumstances under which we may disclose non-personal information.</p>
+
+      <h2>Information We Collect:</h2>
+
+      <ol>
+        <li>
+          <h3>Personal Information:</h3>
+          <p>We do not collect any personally identifiable information such as names, addresses, phone numbers, or email
+            addresses.</p>
+        </li>
+        <li>
+          <h3>User Data:</h3>
+          <p>We do not collect or store any data related to your browsing activities on our website.</p>
+        </li>
+        <li>
+          <h3>Cookies:</h3>
+          <p>We do not use cookies or any similar tracking technologies to collect information about your online
+            activities. However, please note that third-party services, such as Google Analytics, may use cookies as
+            described in the section below.</p>
+        </li>
+        <li>
+          <h3>User Input:</h3>
+          <p>We do not request or require any user input on our website.</p>
+        </li>
+        <li>
+          <h3>Anonymous Non-Personal Information:</h3>
+          <p>We may collect anonymous non-personal information, such as general demographic and statistical data, to
+            enhance and improve the functionality of our website. This information is collected in a way that does not
+            personally identify you. By using our website, you consent to the collection of this anonymous non-personal
+            information for analytical and improvement purposes.</p>
+        </li>
+      </ol>
+
+      <h2>Use of Google Analytics:</h2>
+
+      <p>We use Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses
+        cookies to help us analyze how users interact with our website. The information generated by the cookie about
+        your use of our website (including your IP address) will be transmitted to and stored by Google on servers in
+        the United States. Google will use this information for the purpose of evaluating your use of the website,
+        compiling reports on website activity for website operators, and providing other services relating to website
+        activity and internet usage. Google may also transfer this information to third parties where required to do so
+        by law, or where such third parties process the information on Google's behalf. You may refuse the use of
+        cookies by selecting the appropriate settings on your browser; however, please note that if you do this, you may
+        not be able to use the full functionality of our website. By using our website, you consent to the processing of
+        data about you by Google in the manner and for the purposes set out above.</p>
+
+      <h2>Disclosure of Non-Personal Information:</h2>
+
+      <p>We may disclose aggregated, anonymized, or non-personal information about our website visitors in a manner that
+        does not identify individuals. This information may be shared with third parties for analytics, research, or
+        other purposes.</p>
+
+      <h2>Third-Party Links:</h2>
+
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or
+        content of these third-party sites. We encourage you to read the privacy policies of any linked websites.</p>
+
+      <h2>Changes to This Privacy Policy:</h2>
+
+      <p>We reserve the right to update or change this Privacy Policy at any time. Any changes will be effective
+        immediately upon posting the updated policy on our website.</p>
+
+      <h2>Contact Us:</h2>
+
+      <p>If you have any questions about this Privacy Policy, you can contact us at info@LeeFlagCo.com.</p>
+
+    </div>
+  </div>
+
 
 
   <div class="footer">
@@ -298,7 +586,7 @@
             <a href="conditions_of_use.html" target="_blank">Conditions of Use</a>
             <span style="margin-right: 10px;"></span> <!-- Adjust the margin as needed -->
             <a href="privacy_notice.html" target="_blank">Privacy Notice</a>
-          </p>          
+          </p>
         </div>
       </div>
       <div class="footer-column-right">
@@ -307,9 +595,9 @@
   </div>
 
 
-    <script>
+  <script>
 
-    </script>
+  </script>
 
 </body>
 
