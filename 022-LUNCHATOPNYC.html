@@ -18,6 +18,8 @@
 
     <title>Lee Flag Co.</title>
     <style>
+
+
       body {
         display: flex;
         flex-direction: column;
@@ -26,266 +28,585 @@
         margin: auto;
         align-items: center;
       }
-        .header {
-          width: 100%;
-          height:120px;
-          top: 0;
-          background-color: #ffffff;
-          border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
-          box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
-          padding-top: 0rem;
-        }
-        .header-text-container{
-          display: flex;
-          height: 120px;
-          max-width: 1200px;
-          align-items: center;
-          justify-content: space-between;
-          color: #000000;
-          margin: 0 auto; /* Center the container within the page */
-        }
-        .left-text{
-          display:flex;
-          color: inherit;
-          text-decoration: none;
-          align-items: center;
-          justify-content: left;
-          font-size: 28px;
-        }
-        .left-text h2:hover {
+      .header {
+        width: 100%;
+        height:120px;
+        top: 0;
+        background-color: #ffffff;
+        border-bottom: 0.1rem solid #1c1c1c;; /* Adjust the alpha value */
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5); /* Add a shadow effect */
+        padding-top: 0rem;
+      }
+      .header-text-container{
+        display: flex;
+        height: 120px;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: space-between;
+        color: #000000;
+        margin: 0 auto; /* Center the container within the page */
+      }
+      .left-text{
+        display:flex;
+        color: inherit;
+        text-decoration: none;
+        align-items: center;
+        justify-content: left;
+        font-size: 28px;
+      }
+      .left-text h2:hover {
+        color: #FFCC00; /* Change the color to your desired hover color */
+        cursor: pointer; /* Change the cursor to pointer on hover */
+      }
+      .left-text img{
+        height: 100px; 
+        padding-right: 1rem;
+        object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
+        justify-content: center;
+      }      
+      .right-text{
+        display:flex;
+        color: inherit;
+        text-decoration: none;
+        text-align: right;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+      .right-text p {
+        padding-left: 1rem;
+        text-align: right;
+        font-size: 20px;
+        color: #000000;
+      }
+      .right-text p:hover {
           color: #FFCC00; /* Change the color to your desired hover color */
           cursor: pointer; /* Change the cursor to pointer on hover */
-        }
-        .left-text img{
-          height: 100px; 
-          padding-right: 1rem;
-          object-fit: contain; /* Choose 'contain' or 'cover' based on your preference */
-          justify-content: center;
-        }      
-        .right-text{
-          display:flex;
-          color: inherit;
-          text-decoration: none;
-          text-align: right;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-        }
-        .right-text p {
-          padding-left: 1rem;
-          text-align: right;
-          font-size: 20px;
-          color: #000000;
-        }
-        .right-text p:hover {
-            color: #FFCC00; /* Change the color to your desired hover color */
-            cursor: pointer; /* Change the cursor to pointer on hover */
-        }
-  
-  
-  
-        .container {
-          display: flex;
-          flex: 1;
-          flex-direction:row;
-          border: #ffffff;
-          justify-content: center;
-          align-items: start;
-          padding-top: 0rem;
-          padding-bottom: 1rem;
-          margin-top: auto; /* This is crucial for a sticky footer */
-          width: 1200px;
-  
-        }
-        .left-column {
-          flex: 1;
-          padding: 0rem;
-          background-color: #ffffff;
-          width: 700px;
-        }
-        .left-column p {
-          margin: 0rem 0;
-          text-align: center;
-          padding: 0.25rem;
-          margin-top: 0.5rem;
-        }
-        .large-image-container {
-          display: flex;
-          position: relative;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          font-style: normal;
-          height: 400px;
-          padding-left: 5rem;
-          padding-right: 5rem;
-          padding-bottom: 0rem;
-        }
-        .large-image-container img {
-          max-width: 100%;
-          max-height: 100%;
-          height: auto;
-          margin-top: 2rem;
-          margin-bottom: 0rem;
-          padding-bottom: 0rem;
-          transition: transform 0.3s ease-in-out;
-          cursor: pointer;
-          overflow: auto;
-        }
-        .small-images-container {
-          display: flex;
-          padding-top: 0.75rem;
-          padding-bottom: 0.75rem;
-          justify-content: center; /* Center the images horizontally */
-          align-items: center; /* Center the images vertically */
-        }
-        .small-images-container img {
-          width: 65px;
-          margin: 0rem;
-          padding: 0.5rem;
-          border: 0.1rem solid transparent; /* Add a transparent border to all images */
-          cursor: pointer;
-        }
-        .small-images-container img.selected {
-          border-color: grey; /* Change the border color for the selected image */
-        }
-        .right-column {
-          background-color: #ffffff;
-          margin-right: 6rem;;
-          margin-left: 1rem;
-          width: 500px;
-        }
-        table {
-          border-collapse: collapse;
-          width: 100%;
-          margin-top: 1rem;
-          margin-bottom: 1rem; /* Adjust the margin as needed to increase the gap */
-        }
-        table, th, td {
-          padding: 0.25rem; /* Adjust the padding as needed */
-          text-align: left;        
-        }
-        .table-container{
-          display: flex;
-          position: relative;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          margin: 1rem;
-          font-style: normal;
-          border-top: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
-          border-bottom: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
-        }
-        .table-container h1 {
-          text-align: center;
-        }
-        .table-container h2, h3, p {
-          text-align: start;
-        }
-  
-        .about-section ul {
-          padding-top: 0px;;
-          padding-left: 10px;
-        }
-        .about-section li {
-          margin-bottom: 10px; /* Adjust the value as needed for the desired spacing */
-        }
-  
-        .buy-now {
-          margin-top: 1rem;
-          padding-bottom: 1rem;
-          text-align: center;
-          width: 100%;
-        }
-        button {
-          padding: 0.75rem;
-          background-color: #484cc2;
-          color: white;
-          border: none;
-          border-radius: 0.5rem;
-          cursor: pointer;
-        }
-        .available_at_amazon_logo {
-          text-align: center;
-        }
-        .available_at_amazon_logo img{
-          margin-top: 1rem;
-          width: 120PX;
-          justify-content: center;
-          margin-bottom: 200px;
-        }
-  
-  
-        .footer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #ffffff;
-          border-top: 0.1rem solid gray;
-          box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
-          color: #000000;
-          padding-top: 0rem;
-          padding-bottom: 0rem;
-          position: relative;
-          bottom: 0;
-          margin-bottom: 0;
-          width: 100%;
-        }
-        .footer-container {
-          width: 1200px;  
-          display: flex;
-          align-items: center;
-        }
-        .footer-column-left {
-          width: 400px;
-          padding: 0rem;
-          text-align: left;
-        }
-        .footer-column-center {
-          width: 400px;
-          padding: 0rem;
-          align-items:center;
-          justify-content: left;
-        }
-        .footer-column-center-text-container {
-          text-align: center;
-        }
-        .footer-column-right{
-          width: 400px;
-        }
-        .footer p {
-          margin: 0.25rem 0;
-          text-align: center;
-          font-size: 12px;
-        }
-        .footer a {
-          color: inherit;
-        }
-        .footer img {
-          max-height: 150px;
-        }
-        #overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7);
-          z-index: 2;
+      }
+
+
+      .container {
+        display: flex;
+        flex: 1;
+        flex-direction:row;
+        border: #ffffff;
+        justify-content: center;
+        align-items: start;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: auto; /* This is crucial for a sticky footer */
+        width: 1200px;
+
+      }
+      .left-column {
+        flex: 1;
+        padding: 0rem;
+        background-color: #ffffff;
+        width: 700px;
+      }
+      .left-column p {
+        margin: 0rem 0;
+        text-align: center;
+        padding: 0.25rem;
+        margin-top: 0.5rem;
+      }
+      .large-image-container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-style: normal;
+        height: 400px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 0rem;
+      }
+      .large-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        overflow: auto;
+      }
+      .small-images-container {
+        display: flex;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        justify-content: center; /* Center the images horizontally */
+        align-items: center; /* Center the images vertically */
+      }
+      .small-images-container img {
+        width: 65px;
+        margin: 0rem;
+        padding: 0.5rem;
+        border: 0.1rem solid transparent; /* Add a transparent border to all images */
+        cursor: pointer;
+      }
+      .small-images-container img.selected {
+        border-color: grey; /* Change the border color for the selected image */
+      }
+      .right-column {
+        background-color: #ffffff;
+        margin-right: 6rem;;
+        margin-left: 1rem;
+        width: 500px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem; /* Adjust the margin as needed to increase the gap */
+      }
+      table, th, td {
+        padding: 0.25rem; /* Adjust the padding as needed */
+        text-align: left;        
+      }
+      .table-container{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 1rem;
+        font-style: normal;
+        border-top: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
+        border-bottom: 0.1rem solid #ccc; /* Adjust color and thickness as needed */
+      }
+      .table-container h1 {
+        text-align: center;
+      }
+      .table-container h2, h3, p {
+        text-align: start;
+      }
+
+      .about-section ul {
+        padding-top: 0px;;
+        padding-left: 10px;
+      }
+      .about-section li {
+        margin-bottom: 10px; /* Adjust the value as needed for the desired spacing */
+      }
+
+      .buy-now {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+      }
+      button {
+        padding: 0.75rem;
+        background-color: #484cc2;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      .available_at_amazon_logo {
+        text-align: center;
+      }
+      .available_at_amazon_logo img{
+        margin-top: 1rem;
+        width: 120PX;
+        justify-content: center;
+        margin-bottom: 200px;
+      }
+
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-top: 0.1rem solid gray;
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
+        color: #000000;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        position: relative;
+        bottom: 0;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .footer-container {
+        width: 1200px;  
+        display: flex;
+        align-items: center;
+      }
+      .footer-column-left {
+        width: 400px;
+        padding: 0rem;
+        text-align: left;
+      }
+      .footer-column-center {
+        width: 400px;
+        padding: 0rem;
+        align-items:center;
+        justify-content: left;
+      }
+      .footer-column-center-text-container {
+        text-align: center;
+      }
+      .footer-column-right{
+        width: 400px;
+      }
+      .footer p {
+        margin: 0.25rem 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .footer a {
+        color: inherit;
+      }
+      .footer img {
+        max-height: 150px;
+      }
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+      }
+      #overlay.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #overlay img {
+        max-width: 80%;
+        max-height: 80%;
+        justify-content: center;
+        align-items: center;
+      }
+      .shop-icon {
+        display: none;
+      }
+      .nav-bar {
+        display: flex;
+        width: 1200px;
+        padding: 5px;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 50px;
+      }
+      .square-search-bar {
+        position: relative;
+        padding: 10px; /* Adjust padding for height */
+        width: 300px; /* Adjust width as needed */
+        border-radius: 0px; /* Add border-radius for a square appearance */
+        border: 1px solid #ccc; /* Add border for better visibility */
+      }
+      .search-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 8px; /* Adjust the right position as needed */
+        height: 20px; /* Adjust height of the magnifying glass icon */
+        width: 20px; /* Adjust width of the magnifying glass icon */
+      }
+      
+    @media (max-width: 768px) {
+
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        align-items: center;
+        max-width: 100%;
+      }
+
+      .header {
+        width: 100%;
+        height: 75px;
+        top: 0;
+        align-items: center;
+        background-color: #ffffff;
+        border-bottom: 0.1rem solid #1c1c1c;
+        box-shadow: 0 0 0.5rem rgba(64, 64, 64, 0.5);
+      }
+
+      .header-text-container {
+        display: flex;
+        height: 75px;
+        max-width: 360px;
+        align-items: center;
+        justify-content: flex-start;
+        color: #000000;
+        margin: none;
+      }
+
+      .left-text {
+        display: flex;
+        color: inherit;
+        text-decoration: none;
+        align-items: center;
+        justify-content: left;
+        font-size: 11px;
+        padding: 10px;
+        padding-right: 5px;
+        max-width: 185px;
+      }
+      .left-text h2 {
+        padding-left:10px;
+        padding-right:10px;
+      }
+      .left-text img {
+        height: 50px;
+        width: 50px;
+        padding: 0rpx;
+        padding-right: 0px;
+        object-fit: contain;
+        justify-content: center;
+      }
+
+      .right-text{
+        justify-content: space-evenly;
+        align-items: center;
+        width:150px;
+        max-width:150px;
+      }
+
+      /* Hide the "About" and "Contact" links on small screens */
+      .right-text p:not(:first-child) {
           display: none;
-        }
-        #overlay.active {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        #overlay img {
-          max-width: 80%;
-          max-height: 80%;
-          justify-content: center;
-          align-items: center;
-        }
-      </style>
+      }
+
+      .shop-icon {
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          background: url('assets/shop_icon.png') no-repeat center center;
+          background-size: cover; /* Adjust as needed */
+          cursor: pointer;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column; /* Adjusted for mobile */
+        justify-content: center;
+        align-items: center; /* Center content on mobile */
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        width: 360px; /* Full width on mobile */
+      }
+
+      .left-column {
+        width: 360px; /* Full width on mobile */
+      }
+
+      .left-column p {
+        text-align: center;
+        padding: 0.25rem;
+        margin-top: 0.5rem;
+      }
+
+      .large-image-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0rem;
+        max-height: 360px;
+      }
+
+      .large-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        overflow: auto;
+      }
+
+      .small-images-container {
+        justify-content: start;
+        padding: 10px;
+        max-width: 360px;
+        overflow: scroll;
+      }
+
+      .small-images-container img {
+        width: 50px;
+        margin: 0rem;
+        padding: 0.5rem;
+        border: 0.1rem solid transparent;
+        cursor: pointer;
+      }
+
+      .small-images-container img.selected {
+        border-color: grey;
+      }
+
+      .right-column {
+        width: 360px; /* Full width on mobile */
+        /*justify-content: start;*/
+        margin-right: 30px;;
+        margin-left: 30px;
+      }
+      .right-column h2 {
+        /*padding:00px;*/
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-right: 30px;;
+        padding-left: 30px;
+      }
+
+      .table-container {
+        margin: 1rem;
+        border-top: 0.1rem solid #ccc;
+        border-bottom: 0.1rem solid #ccc;
+      }
+
+      .table-container h1 {
+        text-align: center;
+      }
+
+      .table-container h2, h3, p {
+        text-align: start;
+      }
+      .about-section{
+        margin: 30px;
+      }
+
+      .about-section ul {
+        padding-top: 0px;
+        padding-left: 10px;
+      }
+
+      .about-section li {
+        margin-bottom: 10px;
+      }
+
+      .buy-now {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        width: 360px;
+      }
+
+      button {
+        padding: 0.75rem;
+        background-color: #484cc2;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+
+      .available_at_amazon_logo {
+        text-align: center;
+      }
+
+      .available_at_amazon_logo img {
+        margin-top: 1rem;
+        width: 120px;
+        margin-bottom: 20px; /* Adjusted for mobile */
+      }
+
+      .footer {
+        width: 100%;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+      }
+
+      .footer-container {
+        width: 360px;
+        display: flex;
+        /*flex-direction:column; /* Adjusted for mobile */
+        align-items: center;
+      }
+
+      .footer-column-left, .footer-column-right{
+        width: 60px; /* Full width on mobile */
+        padding: 0rem;
+        text-align: center;
+      }
+      .footer-column-center{
+        width: 240px; /* Full width on mobile */
+        padding: 0rem;
+        text-align: center;
+      }
+      .footer p {
+        
+        text-align: center;
+        font-size: 12px;
+      }
+      .footer a {
+        color: inherit;
+      }
+      .footer img {
+        max-height: 65px;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+      }
+
+      #overlay.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #overlay img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+
+      .search-container {
+        align-items: center;
+        position: relative;
+        width: 50px; /* Adjust width as needed */
+      }
+      .square-search-bar {
+        /*display: none;*/
+        position: relative;
+        padding: 10px; /* Adjust padding for height */
+        width: 50px; /* Adjust width as needed */
+        border-radius: 0px; /* Add border-radius for a square appearance */
+        border: 1px solid #ccc; /* Add border for better visibility */
+      }
+      .search-icon {
+        cursor: pointer;
+        position: relative;
+        right: 0px; /* Adjust the right position as needed */
+        height: 20px; /* Adjust height of the magnifying glass icon */
+        width: 20px; /* Adjust width of the magnifying glass icon */
+        padding: 5px;
+      }
+
+      .nav-bar {
+        width: 300px;
+        padding:0px;
+        /*padding-left: 30px;*/
+        align-items: center;
+      }
+    }
+    </style>
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -312,29 +633,7 @@
             <input type="text" id="search-bar" placeholder="Search..." class="square-search-bar" onkeypress="handleKeyPress(event)">
             <img src="assets/magnifying_glass.png" alt="Search" id="search-icon" class="search-icon" onclick="searchFunction()">
           </div>
-
-          <style>
-                .search-container {
-                  display: flex;
-                  align-items: center;
-                  position: relative;
-                  margin-right: 50px;
-                }
-                .square-search-bar {
-                  position: relative;
-                  padding: 10px; /* Adjust padding for height */
-                  width: 300px; /* Adjust width as needed */
-                  border-radius: 0px; /* Add border-radius for a square appearance */
-                  border: 1px solid #ccc; /* Add border for better visibility */
-                }
-                .search-icon {
-                  cursor: pointer;
-                  position: absolute;
-                  right: 8px; /* Adjust the right position as needed */
-                  height: 20px; /* Adjust height of the magnifying glass icon */
-                  width: 20px; /* Adjust width of the magnifying glass icon */
-                }
-          </style>
+          <div class="shop-icon" onclick="window.location.href='shop.html';"></div>
 
           <p onclick="window.location.href='shop.html';">Shop</p>
           <p onclick="window.location.href='about.html';">About</p>
@@ -343,13 +642,6 @@
       </div>
     </div>
     
-    <style>
-      .nav-bar {
-        display: flex;
-        width: 1200px;
-        padding: 5px;
-      }
-    </style>
       <div class="nav-bar">
         <div style="display: flex; align-items: center; justify-content: flex-start;">
           <p onclick="window.location.href='home.html';" style="text-decoration: underline;">Home</p>
