@@ -993,7 +993,7 @@
           <h3>George Washington Flag (Design A)</h3>
         </a>
 
-        <a id="025-GolfUSA" href="025-GOLFUSA.html" class="grid-item" data-category="sports political"
+        <a id="025-GOLFUSA" href="025-GOLFUSA.html" class="grid-item" data-category="sports political"
           data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="25">
           <img src="assets/B0CQS1HJS2.MAIN.jpg" alt="Golf USA Flag">
           <h3>Golf USA Flag</h3>
@@ -1016,6 +1016,28 @@
           <img src="assets/B0CT47JJ86.MAIN.jpg" alt="Caucasians Flag">
           <h3>Caucasians Flag</h3>
         </a>
+
+        <a id="032-DEFIANT" href="032-DEFIANT.html" class="grid-item" data-category="political"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="32">
+          <img src="assets/032-DEFIANT.MAIN.jpg" alt="Defiant Flag">
+          <h3>Defiant Flag</h3>
+        </a>
+        <a id="033-AMERICAFIRST" href="033-AMERICAFIRST.html" class="grid-item" data-category="political"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="33">
+          <img src="assets/033-AMERICAFIRST.MAIN.jpg" alt="America First Flag">
+          <h3>America First Flag</h3>
+        </a>
+        <a id="034-MYNEIGHBOR" href="034-MYNEIGHBOR.html" class="grid-item" data-category="drinking"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="34">
+          <img src="assets/034-MYNEIGHBOR.MAIN.jpg" alt="My Neighbor Is A Karen Flag">
+          <h3>My Neighbor Is A Karen Flag</h3>
+        </a>
+        <a id="035-ABBROKE" href="035-ABBROKE.html" class="grid-item" data-category="drinking"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="35">
+          <img src="assets/035-ABBROKE.MAIN.jpg" alt="AB Funny Tweet Flag">
+          <h3>AB Funny Tweet Flag</h3>
+        </a>
+
 
       </div>
 
@@ -1065,6 +1087,7 @@
 
   <script>
 
+    //When the page is first loaded, this is the code that will run
     document.addEventListener('DOMContentLoaded', function () {
       // Read the search term from the URL
       var urlParams = new URLSearchParams(window.location.search);
@@ -1078,8 +1101,8 @@
         performSearch(searchTerm);
       }
 
-      // Trigger the change event with the 'bestselling' value
-      document.getElementById('sort-dropdown').value = 'bestselling';
+      //When the page is first loaded, sort by newest
+      document.getElementById('sort-dropdown').value = 'newest';
 
       // Create and dispatch a new event to simulate the change
       var event = new Event('change');
@@ -1111,31 +1134,36 @@
       // Get all grid items
       var gridItems = document.querySelectorAll('.grid-item');
 
+      // Clear the content container
+      var contentContainer = document.querySelector('.content-container .shop-container');
+      contentContainer.innerHTML = '';
+
       // Convert NodeList to an array
       var gridItemsArray = Array.from(gridItems);
 
       var salesData = {
-      '020-LOWRIDER': 1,
-      '014-IRONSHARPENSIRON': 2,
-      '025-GOLFUSA': 3,
-      '011-PROENDSATLAST': 4,
-      '013-DRINKTOKEEPGOING': 5,
-      '002-BAB': 6,
-      '019-NOKARENSALLOWED': 7,
-      '012-RECSLAMBEERS': 8,
-      '028-BIDENPAYMORE': 9,
-      '016-ATTITUDECHOICESEFFORT': 10,
-      '017-DIESOBER': 11,
-      '021-FCOMM': 12,
-      '010-WEWANTBEER': 13,
-      '018-TAT': 14,
-      '024-ALKHARIDGATE': 16,
-      '027-DOGINME': 17,
-      '022-LUNCHATOPNYC': 18,
-      '023-GEORGEWASH-A': 19,
-      '026-GEORGEWASH-B': 20,
-      '029-CAUCASIANS': 21
-    };
+        '020-LOWRIDER': 1,
+        '025-GOLFUSA': 2,
+        '021-FCOMM': 3,
+        '027-DOGINME': 4,
+        '014-IRONSHARPENSIRON': 5,
+        '011-PROENDSATLAST': 6,
+        '015-BAB': 7,
+        '019-NOKARENSALLOWED': 8,
+        '026-GEORGEWASH-B': 9,
+        '012-RECSLAMBEERS': 10,
+        '016-ATTITUDECHOICESEFFORT': 11,
+        '010-WEWANTBEER': 12,
+        '017-DIESOBER': 13,
+        '018-TAT': 14,
+        '022-LUNCHATOPNYC': 15,
+        '023-GEORGEWASH-A': 16,
+        '029-CAUCASIANS': 17,
+        '032-DEFIANT': 18,
+        '033-AMERICAFIRST': 19,
+        '034-MYNEIGHBOR': 20,
+        '035-ABBROKE': 21
+      };
 
       // Sort the array based on the selected sorting option
       if (sortBy === 'bestselling') {
@@ -1194,10 +1222,6 @@
         // You can set a default sorting option or do nothing here
       }
 
-      // Clear the content container
-      var contentContainer = document.querySelector('.content-container .shop-container');
-      contentContainer.innerHTML = '';
-
       // Append sorted grid items to the content container
       gridItemsArray.forEach(function (item) {
         contentContainer.appendChild(item);
@@ -1211,30 +1235,35 @@
       // Get all grid items
       var gridItems = document.querySelectorAll('.grid-item');
 
+      // Clear the content container
+      var contentContainer = document.querySelector('.content-container .shop-container');
+      contentContainer.innerHTML = '';
+
       // Convert NodeList to an array
       var gridItemsArray = Array.from(gridItems);
 
       var salesData = {
-        '013-DRINKTOKEEPGOING': 1,
-        '014-IRONSHARPENSIRON': 2,
-        '011-PROENDSATLAST': 3,
-        '020-LOWRIDER': 4,
-        '025-GOLFUSA': 5,
-        '016-ATTITUDECHOICESEFFORT': 6,
-        '021-FCOMM': 7,
-        '010-WEWANTBEER': 8,
-        '022-LUNCHATOPNYC': 9,
+        '020-LOWRIDER': 1,
+        '025-GOLFUSA': 2,
+        '021-FCOMM': 3,
+        '027-DOGINME': 4,
+        '014-IRONSHARPENSIRON': 5,
+        '011-PROENDSATLAST': 6,
+        '002-BAB': 7,
+        '019-NOKARENSALLOWED': 8,
+        '026-GEORGEWASH-B': 9,
         '012-RECSLAMBEERS': 10,
-        '015-BAB': 11,
-        '017-DIESOBER': 12,
-        '018-TAT': 13,
-        '019-NOKARENSALLOWED': 14,
-        '023-GEORGEWASH-A': 15,
-        '024-ALKHARIDGATE': 16,
-        '026-GEORGEWASH-B': 17,
-        '027-DOGINME': 18,
-        '028-BIDENPAYMORE': 19,
-        '029-CAUCASIANS': 20
+        '016-ATTITUDECHOICESEFFORT': 11,
+        '010-WEWANTBEER': 12,
+        '017-DIESOBER': 13,
+        '018-TAT': 14,
+        '022-LUNCHATOPNYC': 15,
+        '023-GEORGEWASH-A': 16,
+        '029-CAUCASIANS': 17,
+        '032-DEFIANT': 18,
+        '033-AMERICAFIRST': 19,
+        '034-MYNEIGHBOR': 20,
+        '035-ABBROKE': 21
       };
 
       // Sort the array based on the selected sorting option
@@ -1293,10 +1322,6 @@
         // Default sorting
         // You can set a default sorting option or do nothing here
       }
-
-      // Clear the content container
-      var contentContainer = document.querySelector('.content-container .shop-container');
-      contentContainer.innerHTML = '';
 
       // Append sorted grid items to the content container
       gridItemsArray.forEach(function (item) {
