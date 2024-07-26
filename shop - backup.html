@@ -484,6 +484,7 @@
         width: 300px;
         padding: 0px;
         /*padding-left: 30px;*/
+        align-items: start;
       }
 
       .wrapper {
@@ -573,19 +574,19 @@
       #sort-icon {
         display: flex;
         justify-content: left;
-        width: 50px;
+        width: 70px;
       }
 
       #filter-icon {
         display: flex;
         justify-content: right;
-        width: 50px;
+        width: 70px;
       }
 
       .shop-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(11, 1fr);
+        grid-template-rows: repeat(12, 1fr);
         gap: 30px;
         /* Set the gap size */
         background-color: #ffffff;
@@ -595,11 +596,6 @@
         width: 320px;
         height: auto;
         /*padding-bottom: 15rem;*/
-      }
-
-      .shop-container h3 {
-        display: flex;
-        font-size: 14px;
       }
 
       .grid-item {
@@ -741,9 +737,6 @@
         padding: 10px;
         animation: slideDown 0.3s ease-out;
         transition: opacity 0.3s ease-out;
-        right: 0;
-        /* Set the right property to 0 */
-        margin-right: 20px;
       }
 
       .mobile-filter-dropdown label,
@@ -760,16 +753,6 @@
 
       .mobile-filter-dropdown select:focus {
         outline: none;
-      }
-
-      .apply-mobile-filters-text-container {
-        text-align: right;
-      }
-
-      .apply-mobile-filters-text {
-        color: rgb(0, 0, 217);
-        text-decoration: none;
-        cursor: pointer;
       }
     }
   </style>
@@ -867,7 +850,7 @@
         <option value="3' x 5'">3' x 5'</option>
       </select>
 
-      <button id="filter-button" onclick="applyFilters()">Apply</button>
+      <button id="filter-button" onclick="searchAndFilterFunction()">Apply</button>
 
       <img src="assets/filter_icon.png" alt="Filter Icon" id="filter-icon">
       <div class="mobile-filter-dropdown" id="mobile-filter-dropdown">
@@ -893,10 +876,6 @@
           <option value="all">All Sizes</option>
           <option value="3' x 5'">3' x 5'</option>
         </select>
-
-        <div class="apply-mobile-filters-text-container">
-          <span class="apply-mobile-filters-text" onclick="applyMobileFilters()">Apply</span>
-        </div>
       </div>
 
 
@@ -905,141 +884,125 @@
     <div class="content-container">
       <div class="shop-container">
         <a id="010-WEWANTBEER" href="010-WEWANTBEER.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="10">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="10">
           <img src="assets/B0CP8N31HK.MAIN.jpg" alt="We Want Beer Flag">
           <h3>We Want Beer Flag</h3>
         </a>
 
         <a id="011-PROENDSATLAST" href="011-PROENDSATLAST.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="11">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="11">
           <img src="assets/B0CP8MZJWB.MAIN.jpg" alt="Prohibition Ends At Last Flag">
           <h3>Prohibition Ends At Last Flag</h3>
         </a>
 
         <a id="012-RECSLAMBEERS" href="012-RECSLAMBEERS.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="12">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="12">
           <img src="assets/B0CPB63Q25.MAIN.jpg" alt="Recommends Slamming Beers Flag">
           <h3>Recommends Slamming Beers Flag</h3>
         </a>
 
+        <a id="013-DRINKTOKEEPGOING" href="013-DRINKTOKEEPGOING.html" class="grid-item" data-category="gaming"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$24.99" data-date="13">
+          <img src="assets/B0CPB5H28X.MAIN.jpg" alt="Runescape Drink To Keep Going Flag">
+          <h3>Runescape Drink To Keep Going Flag</h3>
+        </a>
+
         <a id="014-IRONSHARPENSIRON" href="014-IRONSHARPENSIRON.html" class="grid-item" data-category="motivational"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="14">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="14">
           <img src="assets/B0CPB6184G.MAIN.jpg" alt="Iron Sharpens Iron Flag">
           <h3>Iron Sharpens Iron Flag</h3>
         </a>
 
         <a id="015-BAB" href="015-BAB.html" class="grid-item" data-category="drinking" data-material="100D Polyester"
-          data-size="3' x 5'" data-price="$19.99" data-date="15">
+          data-size="3' x 5'" data-price="$15.99" data-date="15">
           <img src="assets/B0CPB643ND.MAIN.jpg" alt="The Official Boys Are Buzzin' Flag">
           <h3>The Official Boys Are Buzzin' Flag</h3>
         </a>
 
         <a id="016-ATTITUDECHOICESEFFORT" href="016-ATTITUDECHOICESEFFORT.html" class="grid-item"
-          data-category="motivational" data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99"
+          data-category="motivational" data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99"
           data-date="16">
           <img src="assets/B0CPB5Y2VW.MAIN.jpg" alt="Attitude Choices Effort Motivational Flag">
           <h3>Attitude Choices Effort Motivational Flag</h3>
         </a>
 
         <a id="017-DIESOBER" href="017-DIESOBER.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="17">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="17">
           <img src="assets/B0CPB68LFQ.MAIN.jpg" alt="I Will Not Die Sober Flag">
           <h3>I Will Not Die Sober Flag</h3>
         </a>
 
         <a id="018-TAT" href="018-TAT.html" class="grid-item" data-category="automotive" data-material="100D Polyester"
-          data-size="3' x 5'" data-price="$19.99" data-date="18">
+          data-size="3' x 5'" data-price="$15.99" data-date="18">
           <img src="assets/B0CPB5D4QN.MAIN.jpg" alt="Trans America Trail Flag">
           <h3>Trans America Trail Flag</h3>
         </a>
 
         <a id="019-NOKARENSALLOWED" href="019-NOKARENSALLOWED.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="19">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="19">
           <img src="assets/B0CPB51THL.MAIN.jpg" alt="No Karens Allowed Flag">
           <h3>No Karens Allowed Flag</h3>
         </a>
 
         <a id="020-LOWRIDER" href="020-LOWRIDER.html" class="grid-item" data-category="automotive"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="20">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="20">
           <img src="assets/B0CQ3L2LGK.MAIN.jpg" alt="Retro Lowrider Flag">
           <h3>Retro Lowrider Flag</h3>
         </a>
 
         <a id="021-FCOMM" href="021-FCOMM.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="21">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="21">
           <img src="assets/B0CQPSXWYP.MAIN.jpg" alt="Fuck Communism Flag">
           <h3>Fuck Communism Flag</h3>
         </a>
 
         <a id="022-LUNCHATOPNYC" href="022-LUNCHATOPNYC.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="22">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="22">
           <img src="assets/B0CQPPW3TR.MAIN.jpg" alt="Lunch Atop a Skyscraper Flag">
           <h3>Lunch Atop a Skyscraper Flag</h3>
         </a>
 
         <a id="023-GEORGEWASH-A" href="023-GEORGEWASH-A.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="23">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="23">
           <img src="assets/B0CT49BFKT.MAIN.jpg" alt="George Washington Flag (Design A)">
           <h3>George Washington Flag (Design A)</h3>
         </a>
 
-        <a id="025-GOLFUSA" href="025-GOLFUSA.html" class="grid-item" data-category="sports political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="25">
+        <a id="024-ALKHARIDGATE" href="024-ALKHARIDGATE.html" class="grid-item" data-category="gaming"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$24.99" data-date="24">
+          <img src="assets/B0CT49ZXJ2.MAIN.jpg" alt="Runescape Al Kharid Gate Flag">
+          <h3>Runescape Al Kharid Gate Flag</h3>
+        </a>
+
+        <a id="025-GolfUSA" href="025-GolfUSA.html" class="grid-item" data-category="sports political"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="25">
           <img src="assets/B0CQS1HJS2.MAIN.jpg" alt="Golf USA Flag">
           <h3>Golf USA Flag</h3>
         </a>
 
         <a id="026-GEORGEWASH-B" href="026-GEORGEWASH-B.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="26">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="26">
           <img src="assets/B0CT47RSZB.MAIN.jpg" alt="George Washington Flag (Design B)">
           <h3>George Washington Flag (Design B)</h3>
         </a>
 
         <a id="027-DOGINME" href="027-DOGINME.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="27">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="27">
           <img src="assets/B0CT4B26TH.MAIN.jpg" alt="I Got That Dog In Me Flag">
           <h3>I Got That Dog In Me Flag</h3>
         </a>
 
+        <a id="028-BIDENPAYMORE" href="028-BIDENPAYMORE.html" class="grid-item" data-category="political"
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="28">
+          <img src="assets/B0CT493S3P.MAIN.jpg" alt="Biden Pay More Live Worse Flag">
+          <h3>Biden Pay More Live Worse Flag</h3>
+        </a>
+
         <a id="029-CAUCASIANS" href="029-CAUCASIANS.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="29">
+          data-material="100D Polyester" data-size="3' x 5'" data-price="$15.99" data-date="29">
           <img src="assets/B0CT47JJ86.MAIN.jpg" alt="Caucasians Flag">
           <h3>Caucasians Flag</h3>
         </a>
-
-        <a id="032-DEFIANT" href="032-DEFIANT.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="32">
-          <img src="assets/032-DEFIANT.MAIN.jpg" alt="Defiant Flag">
-          <h3>Defiant Flag</h3>
-        </a>
-        <a id="033-AMERICAFIRST" href="033-AMERICAFIRST.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="33">
-          <img src="assets/033-AMERICAFIRST.MAIN.jpg" alt="America First Flag">
-          <h3>America First Flag</h3>
-        </a>
-        <a id="034-MYNEIGHBOR" href="034-MYNEIGHBOR.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="34">
-          <img src="assets/034-MYNEIGHBOR.MAIN.jpg" alt="My Neighbor Is A Karen Flag">
-          <h3>My Neighbor Is A Karen Flag</h3>
-        </a>
-        <a id="035-ABBROKE" href="035-ABBROKE.html" class="grid-item" data-category="drinking"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="35">
-          <img src="assets/035-ABBROKE.MAIN.jpg" alt="AB Funny Tweet Flag">
-          <h3>AB Funny Tweet Flag</h3>
-        </a>
-
-        <a id="036-FISHUSA" href="036-FISHUSA.html" class="grid-item" data-category="sports"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="36">
-          <img src="assets/036-FISHUSA.MAIN.jpg" alt="Fish USA Flag">
-          <h3>Fish USA Flag</h3>
-        </a>
-
-        <a id="037-UNITEAMERICA" href="037-UNITEAMERICA.html" class="grid-item" data-category="political"
-          data-material="100D Polyester" data-size="3' x 5'" data-price="$19.99" data-date="37">
-          <img src="assets/037-UNITEAMERICA.MAIN.jpg" alt="Unite America Flag">
-          <h3>Unite America Flag</h3>
-        </a>
-
 
       </div>
 
@@ -1089,28 +1052,16 @@
 
   <script>
 
-    //When the page is first loaded, this is the code that will run
+    // Sort by bestselling when the page first loads
     document.addEventListener('DOMContentLoaded', function () {
-      // Read the search term from the URL
-      var urlParams = new URLSearchParams(window.location.search);
-      var searchTerm = urlParams.get('search');
-      console.log('Search term from URL:', searchTerm);
-
-      // If the search term is present, perform the search using searchTermFromUrl
-      if (searchTerm) {
-        console.log('Setting search bar value:', searchTerm);
-        document.getElementById('search-bar').value = searchTerm;
-        performSearch(searchTerm);
-      }
-
-      //When the page is first loaded, sort by newest
-      document.getElementById('sort-dropdown').value = 'newest';
+      // Trigger the change event with the 'bestselling' value
+      document.getElementById('sort-dropdown').value = 'bestselling';
+      document.getElementById('mobile-sort-dropdown').value = 'bestselling';
 
       // Create and dispatch a new event to simulate the change
       var event = new Event('change');
       document.getElementById('sort-dropdown').dispatchEvent(event);
     });
-
 
     //Toggle the display of the mobile sort dropdown menu when the sort icon is clicked 
     document.getElementById('sort-icon').addEventListener('click', function () {
@@ -1136,37 +1087,30 @@
       // Get all grid items
       var gridItems = document.querySelectorAll('.grid-item');
 
-      // Clear the content container
-      var contentContainer = document.querySelector('.content-container .shop-container');
-      contentContainer.innerHTML = '';
-
       // Convert NodeList to an array
       var gridItemsArray = Array.from(gridItems);
 
       var salesData = {
-        '020-LOWRIDER': 1,
-        '025-GOLFUSA': 2,
-        '021-FCOMM': 3,
-        '027-DOGINME': 4,
-        '014-IRONSHARPENSIRON': 5,
-        '011-PROENDSATLAST': 6,
-        '015-BAB': 7,
-        '019-NOKARENSALLOWED': 8,
-        '026-GEORGEWASH-B': 9,
+        '013-DRINKTOKEEPGOING': 1,
+        '014-IRONSHARPENSIRON': 2,
+        '011-PROENDSATLAST': 3,
+        '020-LOWRIDER': 4,
+        '025-GOLFUSA': 5,
+        '016-ATTITUDECHOICESEFFORT': 6,
+        '021-FCOMM': 7,
+        '010-WEWANTBEER': 8,
+        '022-LUNCHATOPNYC': 9,
         '012-RECSLAMBEERS': 10,
-        '016-ATTITUDECHOICESEFFORT': 11,
-        '010-WEWANTBEER': 12,
-        '017-DIESOBER': 13,
-        '018-TAT': 14,
-        '022-LUNCHATOPNYC': 15,
-        '023-GEORGEWASH-A': 16,
-        '029-CAUCASIANS': 17,
-        '032-DEFIANT': 18,
-        '033-AMERICAFIRST': 19,
-        '034-MYNEIGHBOR': 20,
-        '035-ABBROKE': 21,
-        '036-FISHUSA': 22,
-        '037-UNITEAMERICA': 23
+        '015-BAB': 11,
+        '017-DIESOBER': 12,
+        '018-TAT': 13,
+        '019-NOKARENSALLOWED': 14,
+        '023-GEORGEWASH-A': 15,
+        '024-ALKHARIDGATE': 16,
+        '026-GEORGEWASH-B': 17,
+        '027-DOGINME': 18,
+        '028-BIDENPAYMORE': 19,
+        '029-CAUCASIANS': 20
       };
 
       // Sort the array based on the selected sorting option
@@ -1226,6 +1170,10 @@
         // You can set a default sorting option or do nothing here
       }
 
+      // Clear the content container
+      var contentContainer = document.querySelector('.content-container .shop-container');
+      contentContainer.innerHTML = '';
+
       // Append sorted grid items to the content container
       gridItemsArray.forEach(function (item) {
         contentContainer.appendChild(item);
@@ -1239,35 +1187,30 @@
       // Get all grid items
       var gridItems = document.querySelectorAll('.grid-item');
 
-      // Clear the content container
-      var contentContainer = document.querySelector('.content-container .shop-container');
-      contentContainer.innerHTML = '';
-
       // Convert NodeList to an array
       var gridItemsArray = Array.from(gridItems);
 
       var salesData = {
-        '020-LOWRIDER': 1,
-        '025-GOLFUSA': 2,
-        '021-FCOMM': 3,
-        '027-DOGINME': 4,
-        '014-IRONSHARPENSIRON': 5,
-        '011-PROENDSATLAST': 6,
-        '002-BAB': 7,
-        '019-NOKARENSALLOWED': 8,
-        '026-GEORGEWASH-B': 9,
+        '013-DRINKTOKEEPGOING': 1,
+        '014-IRONSHARPENSIRON': 2,
+        '011-PROENDSATLAST': 3,
+        '020-LOWRIDER': 4,
+        '025-GOLFUSA': 5,
+        '016-ATTITUDECHOICESEFFORT': 6,
+        '021-FCOMM': 7,
+        '010-WEWANTBEER': 8,
+        '022-LUNCHATOPNYC': 9,
         '012-RECSLAMBEERS': 10,
-        '016-ATTITUDECHOICESEFFORT': 11,
-        '010-WEWANTBEER': 12,
-        '017-DIESOBER': 13,
-        '018-TAT': 14,
-        '022-LUNCHATOPNYC': 15,
-        '023-GEORGEWASH-A': 16,
-        '029-CAUCASIANS': 17,
-        '032-DEFIANT': 18,
-        '033-AMERICAFIRST': 19,
-        '034-MYNEIGHBOR': 20,
-        '035-ABBROKE': 21
+        '015-BAB': 11,
+        '017-DIESOBER': 12,
+        '018-TAT': 13,
+        '019-NOKARENSALLOWED': 14,
+        '023-GEORGEWASH-A': 15,
+        '024-ALKHARIDGATE': 16,
+        '026-GEORGEWASH-B': 17,
+        '027-DOGINME': 18,
+        '028-BIDENPAYMORE': 19,
+        '029-CAUCASIANS': 20
       };
 
       // Sort the array based on the selected sorting option
@@ -1327,6 +1270,10 @@
         // You can set a default sorting option or do nothing here
       }
 
+      // Clear the content container
+      var contentContainer = document.querySelector('.content-container .shop-container');
+      contentContainer.innerHTML = '';
+
       // Append sorted grid items to the content container
       gridItemsArray.forEach(function (item) {
         contentContainer.appendChild(item);
@@ -1366,17 +1313,38 @@
       }
     });
 
-    // Function to perform the search
-    function performSearch(searchTerm) {
+    // Function to get the value of a query parameter from the URL
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // Read the search term from the URL
+    const searchTermFromUrl = getQueryParam('search');
+
+    // If the search term is present, perform the search using searchTermFromUrl
+    if (searchTermFromUrl) {
+      document.getElementById('search-bar').value = searchTermFromUrl;
+      performSearchAndFilter(searchTermFromUrl);
+    }
+
+    // Function to perform the search and filter items
+    function performSearchAndFilter(searchTerm, category, material, size) {
       const gridItems = document.querySelectorAll('.grid-item');
 
       // Loop through each grid item and check if it meets the filtering criteria
       gridItems.forEach(function (item) {
-        const title = item.querySelector('h3').innerText.toLowerCase();
-        console.log
+        const title = item.querySelector('p').innerText.toLowerCase();
+        const itemCategory = item.getAttribute('data-category').toLowerCase();
+        const itemMaterial = item.getAttribute('data-material').toLowerCase();
+        const itemSize = item.getAttribute('data-size').toLowerCase();
+
         // If the title contains the search term and the item matches the selected filters, show the item, otherwise hide it
         if (
-          title.includes(searchTerm.toLowerCase())
+          title.includes(searchTerm.toLowerCase()) &&
+          (category === 'all' || itemCategory.includes(category)) &&
+          (material === 'all' || itemMaterial.toLowerCase().includes(material.toLowerCase())) &&
+          (size === 'all' || itemSize.includes(size))
         ) {
           item.style.display = 'block';
         } else {
@@ -1388,99 +1356,22 @@
     // Function to handle Enter key press
     function handleKeyPress(event) {
       if (event.key === 'Enter') {
-
-        searchFunction();
-        /*
-        searchTerm = document.getElementById('search-bar').value;
-        console.log('Search term from enter:', searchTerm);
-        performSearch(searchTerm);
-        */
+        searchAndFilterFunction();
       }
     }
 
     // Function to perform the search and filtering when clicking the magnifying glass
-    function applyFilters() {
-      //const searchTerm = document.getElementById('search-bar').value;
+    function searchAndFilterFunction() {
+      const searchTerm = document.getElementById('search-bar').value;
       const categoryDropdown = document.getElementById('category-dropdown');
       const materialDropdown = document.getElementById('material-dropdown');
       const sizeDropdown = document.getElementById('size-dropdown');
 
-      const selectedCategory = categoryDropdown.value.toLowerCase();
-      const selectedMaterial = materialDropdown.value.toLowerCase();
-      const selectedSize = sizeDropdown.value.toLowerCase();
+      const selectedCategory = categoryDropdown.value;
+      const selectedMaterial = materialDropdown.value;
+      const selectedSize = sizeDropdown.value;
 
-      console.log("selectedCategory: ", selectedCategory)
-      console.log("selectedMaterial: ", selectedMaterial)
-      console.log("selectedSize: ", selectedSize)
-
-      const gridItems = document.querySelectorAll('.grid-item');
-
-      // Loop through each grid item and check if it meets the filtering criteria
-      gridItems.forEach(function (item) {
-        //const title = item.querySelector('h3').innerText.toLowerCase();
-        const itemCategory = item.getAttribute('data-category').toLowerCase();
-        const itemMaterial = item.getAttribute('data-material').toLowerCase();
-        const itemSize = item.getAttribute('data-size').toLowerCase();
-
-        // If the item matches the selected filters, show the item, otherwise hide it
-        if (
-          (selectedCategory === 'all' || itemCategory.includes(selectedCategory)) &&
-          (selectedMaterial === 'all' || itemMaterial.toLowerCase().includes(selectedMaterial)) &&
-          (selectedSize === 'all' || itemSize.includes(selectedSize))
-        ) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-
-      });
-
-    }
-
-    function applyMobileFilters() {
-      const categoryDropdown = document.getElementById('mobile-category-dropdown');
-      const materialDropdown = document.getElementById('mobile-material-dropdown');
-      const sizeDropdown = document.getElementById('mobile-size-dropdown');
-
-      const selectedCategory = categoryDropdown.value.toLowerCase();
-      const selectedMaterial = materialDropdown.value.toLowerCase();
-      const selectedSize = sizeDropdown.value.toLowerCase();
-
-      console.log("selectedCategory: ", selectedCategory)
-      console.log("selectedMaterial: ", selectedMaterial)
-      console.log("selectedSize: ", selectedSize)
-
-      const gridItems = document.querySelectorAll('.grid-item');
-
-      // Loop through each grid item and check if it meets the filtering criteria
-      gridItems.forEach(function (item) {
-        //const title = item.querySelector('h3').innerText.toLowerCase();
-        const itemCategory = item.getAttribute('data-category').toLowerCase();
-        const itemMaterial = item.getAttribute('data-material').toLowerCase();
-        const itemSize = item.getAttribute('data-size').toLowerCase();
-
-        // If the item matches the selected filters, show the item, otherwise hide it
-        if (
-          (selectedCategory === 'all' || itemCategory.includes(selectedCategory)) &&
-          (selectedMaterial === 'all' || itemMaterial.toLowerCase().includes(selectedMaterial)) &&
-          (selectedSize === 'all' || itemSize.includes(selectedSize))
-        ) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-
-      });
-
-      // Close the dropdown gradually after selecting an option
-      var menu = document.getElementById('mobile-filter-dropdown');
-      menu.style.opacity = 0;
-
-      // Use setTimeout to hide the menu after the transition
-      setTimeout(function () {
-        menu.style.display = 'none';
-        menu.style.opacity = 1; // Reset opacity for future display
-      }, 300); // 300 milliseconds, matching the transition duration
+      performSearchAndFilter(searchTerm, selectedCategory, selectedMaterial, selectedSize);
     }
   </script>
 
